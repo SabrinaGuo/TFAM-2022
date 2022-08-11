@@ -1,0 +1,38 @@
+@mixin layout($Width) {
+  max-width: $Width;
+}
+
+/* flex */
+@mixin flex-style($justify, $alignItem, $wrap) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $alignItem;
+  flex-wrap: $wrap;
+}
+/* size */
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+/* 置中 */
+@mixin position-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+/* 動畫效果 */
+@mixin tran($ani-speed: 0.3s, $ani-delay: null, $ani-property: all) {
+  transition-duration: $ani-speed;
+  transition-property: $ani-property;
+  transition-delay: $ani-delay;
+}
+
+/* text */
+@mixin text($size: null, $weight: null, $color: null) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}

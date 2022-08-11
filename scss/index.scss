@@ -1,0 +1,6 @@
+@import "_mixin";
+@import "_variable";
+//===== 以上共用 =====
+
+@include media-breakpoint-up("lg") {
+}

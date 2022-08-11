@@ -1,0 +1,31 @@
+@import "_reset";
+@import "_mixin";
+@import "_spacing";
+@import "_variable";
+html {
+  // 專門處理IOS旋轉問題
+  -webkit-text-size-adjust: 100%;
+  *,
+  *:before,
+  *:after {
+    font-size: 14px;
+    font-family: "Microsoft JhengHei", "Apple LiGothic Medium", "PMingLiU",
+      "sans-serif", "serif";
+  }
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  &:focus {
+    outline: 2px dotted black;
+  }
+}
+//===== 以上共用 =====
