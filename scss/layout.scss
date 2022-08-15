@@ -197,7 +197,8 @@ a {
   }
   @include media-breakpoint-up("xl") {
     &:hover {
-      color: $text-color-primary;
+      background-color: $color-black;
+      color: #ffffff;
     }
   }
 }
