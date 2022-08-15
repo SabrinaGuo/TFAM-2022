@@ -4,7 +4,7 @@
 /* 置中 */
 /* 動畫效果 */
 /* text */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap");
 /* font */
 /* radius */
 /* image url */
@@ -34,6 +34,7 @@
   font-weight: bold;
   line-height: normal;
   color: #5263ff;
+  padding-bottom: 20px;
 }
 
 .about-content {
@@ -245,5 +246,40 @@
   .about-sec {
     margin-bottom: 60px;
   }
+}
+
+.ex-list {
+  list-style: disc;
+  padding-left: 30px;
+}
+
+.ex-list li {
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: normal;
+  text-align: justify;
+  color: #000000;
+}
+
+.ex-link {
+  display: block;
+  font-size: 0;
+  padding-left: 30px;
+}
+
+.ex-link span {
+  display: inline-block;
+  color: #5263ff;
+  vertical-align: middle;
+  font-size: 1.25rem;
+  line-height: 1.71;
+}
+
+.ex-link span img {
+  width: 18px;
+  margin-left: 6px;
 }
 /*# sourceMappingURL=aboutUs.css.map */
