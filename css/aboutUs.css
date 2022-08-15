@@ -1,0 +1,247 @@
+@charset "UTF-8";
+/* flex */
+/* size */
+/* 置中 */
+/* 動畫效果 */
+/* text */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap");
+/* font */
+/* radius */
+/* image url */
+/* ------- media query ------- */
+.about-wrap {
+  width: 100%;
+  border-top: 1px solid #000;
+  padding: 24px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.about-name {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: normal;
+  color: #5263ff;
+}
+
+.about-content {
+  width: 100%;
+}
+
+.about-content p {
+  font-size: 1.125rem;
+  line-height: 2;
+  text-align: justify;
+  color: #000000;
+}
+
+@media (min-width: 768px) {
+  .about-name {
+    max-width: 20%;
+  }
+  .about-content {
+    max-width: 80%;
+  }
+}
+
+@media (max-height: 420px) {
+  .about-name {
+    max-width: 100%;
+  }
+  .about-content {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .about-name {
+    max-width: calc(100% - 1200px);
+  }
+  .about-content {
+    max-width: 1200px;
+  }
+  .about-content p {
+    font-size: 1.25rem;
+  }
+}
+
+.pic-box {
+  margin: 20px 0;
+}
+
+.pic-box.full-img {
+  max-width: 100%;
+}
+
+.pic-box.sm-img {
+  max-width: 100%;
+}
+
+.pic-box.group-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.pic-box.group-img figure {
+  max-width: 100%;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.pic-box.group-img figure:first-of-type {
+  margin-top: 0;
+}
+
+.pic-box figure {
+  width: 100%;
+}
+
+.pic-box figure img {
+  width: 100%;
+}
+
+.pic-box figcaption {
+  font-size: 1.125rem;
+  color: #757575;
+  padding-top: 6px;
+  line-height: normal;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .pic-box.float-right-img {
+    float: right;
+    margin: 0 0 0 30px;
+  }
+  .pic-box.float-left-img {
+    float: left;
+    margin: 0 30px 0 0;
+  }
+  .pic-box.group-img figure {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+  .pic-box.group-img figure:first-of-type {
+    margin-top: 0;
+  }
+  .pic-box.group-img figure:nth-of-type(2) {
+    margin-top: 20px;
+  }
+  .pic-box.group-img figure:nth-of-type(2n) {
+    margin-left: 0px;
+  }
+}
+
+@media (max-height: 420px) {
+  .pic-box {
+    margin: 20px 0;
+  }
+  .pic-box.float-right-img {
+    float: right;
+    margin: 0 0 0 15px;
+  }
+  .pic-box.float-left-img {
+    float: left;
+    margin: 0 15px 0 0;
+  }
+  .pic-box.sm-img {
+    max-width: 160px;
+  }
+  .pic-box.group-img figure {
+    margin-top: 10px;
+    max-width: calc((100% - 10px) / 2);
+  }
+  .pic-box.group-img figure:first-of-type {
+    margin-top: 0;
+  }
+  .pic-box.group-img figure:nth-of-type(2) {
+    margin-top: 0;
+  }
+  .pic-box.group-img figure:nth-of-type(2n) {
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  .pic-box {
+    margin: 40px 0;
+  }
+  .pic-box.float-right-img {
+    margin: 0 0 0 40px;
+  }
+  .pic-box.float-left-img {
+    margin: 0 40px 0 0;
+  }
+  .pic-box.sm-img {
+    max-width: 200px;
+  }
+  .pic-box.group-img figure {
+    max-width: calc((100% - 20px) / 2);
+    margin-top: 20px;
+  }
+  .pic-box.group-img figure:first-of-type {
+    margin-top: 0;
+  }
+  .pic-box.group-img figure:nth-of-type(2) {
+    margin-top: 0;
+  }
+  .pic-box.group-img figure:nth-of-type(2n) {
+    margin-left: 20px;
+  }
+  .pic-box figcaption {
+    padding-top: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pic-box.group-img figure {
+    max-width: calc((100% - 40px) / 2);
+    margin-top: 40px;
+  }
+  .pic-box.group-img figure:nth-of-type(2) {
+    margin-top: 0;
+  }
+  .pic-box.group-img figure:nth-of-type(2n) {
+    margin-left: 40px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .pic-box figcaption {
+    font-size: 1.25rem;
+  }
+}
+
+.paragraph {
+  margin-bottom: 20px;
+}
+
+.about-sec {
+  margin-bottom: 34px;
+}
+
+@media (min-width: 1200px) {
+  .about-sec {
+    margin-bottom: 60px;
+  }
+}
+/*# sourceMappingURL=aboutUs.css.map */

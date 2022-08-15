@@ -1,27 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap");
 
-$black: #333333;
+$color-primary: #5263ff;
+$color-black: #000000;
+$color-contrast: #ff6000;
 
-$purple-100: #f7f5fa;
-$purple-200: #f0ebf5;
-$purple-300: #a494e1;
-$purple-500: #6b52c7;
-$purple-800: #361f89;
+$text-color-black: $color-black;
+$text-color-primary: $color-primary;
+$text-color-secondary: #919191;
+$text-color-content: #666666;
+$text-color-date: #8a8a8a;
 
-$green-300: #c7f0df;
-$green-500: #43cd94;
-$green-700: #20bc7c;
-
-$gray-200: #eeeeee;
-$gray-400: #c8c8c8;
-$gray-500: #757575;
-
-$red-500: #ee5d5d;
+//Base size of fonts is 16px.
+$font-xxxl: 5.625rem; //90px
+$font-xxl: 3.75rem; //60px
+$font-xl: 2.8125rem; //45px
+$font-lg: 2.25rem; //36px
+$font-md: 1.25rem; //20px
+$font-sm: 1.125rem; //18px
+$font-normal: 1rem; //16px
 
 /* font */
 $font-family: "Noto Sans TC", "PingFangTC-Regular", "sans-serif", "微軟正黑體",
   "Microsoft JhengHei";
-$text-bold: 600;
+$text-bold: 700;
 
 /* radius */
 $radius: 10px;
@@ -33,10 +34,10 @@ $path: "./../images";
 $width-xs: 360px;
 $width-sm: 576px;
 $width-md: 768px;
-$width-lg: 992px;
-$width-xl: 1200px;
+$width-lg: 992px; //平板
+$width-xl: 1200px; //pc
 $width-xxl: 1400px;
-$width-xxxl: 2000px;
+$width-xxxl: 1600px;
 
 $breakpoints: (
   "xs": $width-xs,

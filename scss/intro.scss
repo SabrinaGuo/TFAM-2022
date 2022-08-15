@@ -1,0 +1,66 @@
+@import "_mixin";
+@import "_variable";
+//===== 以上共用 =====
+.header-intro {
+  position: relative;
+  background: #ffffff url("../images/kv-intro-banner@2x.png") left bottom
+    no-repeat;
+  background-size: 91.5% auto;
+  height: 100vh;
+  //   height: calc(100vh - 164px);
+  //   padding-bottom: 49.4%;
+  .header-top {
+    top: 30px;
+  }
+  .header-title {
+    width: 100%;
+    left: 50%;
+    top: 36%;
+    transform: translate(-50%, -50%);
+    @include flex-style(center, start, wrap);
+  }
+  @media (max-height: 420px) {
+    height: 540px;
+  }
+  @include media-breakpoint-up("lg") {
+    .header-top {
+      top: 50px;
+    }
+    .header-title {
+      width: 100%;
+      left: 50%;
+      top: 36%;
+    }
+  }
+  @include media-breakpoint-up("xl") {
+    height: 100vh;
+    .header-top {
+      top: 30px;
+    }
+    .header-title {
+      width: 100%;
+      left: 50%;
+      top: 36%;
+    }
+  }
+}
+.lang-box {
+  @include flex-style(center, center, nowrap);
+  width: 100%;
+  padding-top: 56px;
+  a {
+    padding: 0 50px;
+    color: $text-color-black;
+    font-size: $font-sm;
+    & + a {
+      border-left: 1px solid #000;
+    }
+  }
+  @include media-breakpoint-up("xl") {
+    a {
+      &:hover {
+        color: $text-color-primary;
+      }
+    }
+  }
+}

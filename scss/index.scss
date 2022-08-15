@@ -2,5 +2,127 @@
 @import "_variable";
 //===== 以上共用 =====
 
-@include media-breakpoint-up("lg") {
+.exhibition-list {
+  @include flex-style(start, stretch, wrap);
+  li {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 0 50px 0;
+    figure {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+    .date {
+      padding: 20px 0;
+      @include flex-style(space-between, center, nowrap);
+      p {
+        font-size: 1.75rem; //28px
+        font-weight: bold;
+        line-height: 1;
+        text-align: left;
+        color: $text-color-primary;
+        max-width: calc(100% - 35px);
+        width: 100%;
+      }
+      .arrow-icon {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        border: solid 1px #838383;
+        border-radius: 50%;
+        img {
+          display: inline-block;
+          width: 19px;
+        }
+      }
+    }
+    .detail-list {
+      border-top: 1px solid #838383;
+      li {
+        max-width: 100%;
+        width: 100%;
+        border-bottom: 1px solid #838383;
+        font-size: $font-sm;
+        line-height: 1.29;
+        color: $text-color-content;
+        margin: 0;
+        a {
+          word-break: break-word;
+          display: block;
+          padding: 14px 0;
+          color: inherit;
+          @include tran(0.5s);
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up("sm") {
+    li {
+      max-width: calc((100% - 100px) / 2);
+      margin: 0 25px 50px;
+    }
+    .date {
+      padding: 20px 0;
+      p {
+        font-size: 1.875rem; //30px
+      }
+    }
+    .detail-list {
+      li {
+        font-size: $font-sm;
+      }
+    }
+  }
+  @include media-breakpoint-up("md") {
+    li {
+      max-width: calc((100% - 150px) / 3);
+      margin: 0 25px 100px;
+    }
+    .date {
+      padding: 20px 0;
+      p {
+        font-size: 2rem; //32px
+      }
+    }
+    .detail-list {
+      li {
+        font-size: $font-normal;
+      }
+    }
+  }
+  @include media-breakpoint-up("lg") {
+    li {
+      max-width: calc((100% - 200px) / 4);
+    }
+    .date {
+      padding: 20px 0;
+      p {
+        font-size: 2rem; //32px
+      }
+    }
+    .detail-list {
+      li {
+        font-size: $font-sm;
+      }
+    }
+  }
+  @include media-breakpoint-up("xl") {
+    .date {
+      padding: 24px 0;
+    }
+    .detail-list {
+      li {
+        font-size: $font-md;
+        &:hover {
+          a {
+            background-color: $color-primary;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
 }

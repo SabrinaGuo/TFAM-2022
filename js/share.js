@@ -1,61 +1,67 @@
-$(".menuBtn").click(function() {
-	$("html,body").toggleClass('active listOpen');
+const body = document.querySelector("body");
+const doc = document.querySelector("html");
+const meunBtn = document.querySelector(".meun-btn");
+const meunListItem = document.querySelectorAll(".meun-list li");
+const searchInput = document.querySelector(".search-box");
+
+// const goTop = document.querySelector(".goTop");
+let meunOpen = false; //選單開啟與否
+let searchBarOpen = false; //search開啟與否
+
+//開啟收合的選單
+meunBtn.addEventListener("click", () => {
+  if (meunOpen) {
+    meunOpen = false;
+    body.classList.remove("active");
+    doc.classList.remove("active");
+  } else {
+    meunOpen = true;
+    body.classList.add("active");
+    doc.classList.add("active");
+  }
 });
 
-//點擊 li 即關閉meun
-$(".lists li a ,.sub_list li a").click(function() {
-	$("html,body").removeClass('active listOpen');
-});
-$(".lists>li>a").click(function() {
-	$(this).parent('li').addClass('on').siblings().removeClass('on');
+//選單點擊 add class name:on
+meunListItem.forEach((item) => {
+  item.addEventListener("click", () => {
+    meunListItem.forEach((i) => {
+      i.classList.remove("on");
+    });
+    item.classList.add("on");
+  });
 });
 
-//meun 滑鼠點擊與滑入都可打開子選單
-$('.lists li').on('mouseover click',function(){
-	if($(this).children().hasClass('sub_list')){
-		$('.nav_list').addClass('subOpen')
-	}else{
-		$('.nav_list').removeClass('subOpen')
-	}
-})
-
-// 點空白關meun
-$(document).mouseup(function (e) {
-    var container = $("nav");
-    if (!container.is(e.target) && container.has(e.target).length === 0) {
-		$("html,body").removeClass('active listOpen');
+//寬度小於 1200 時 開關 search input
+searchInput.addEventListener("click", (e) => {
+  if (body.clientWidth < 1200) {
+    if (e.target.matches("img") && searchBarOpen) {
+      searchInput.classList.remove("onFocus");
+      searchBarOpen = false;
+    } else {
+      searchInput.classList.add("onFocus");
+      searchBarOpen = true;
     }
+  }
+  return;
 });
 
-// 錨點下滑
-$("a[href^=#]").click(function(){
-    $("html,body").stop().animate({scrollTop:$(this.hash).offset().top},800);
-    return false;
+//關閉 search input
+//寬度小於 1200 時 不是點擊search input or search icon 就會關閉 search input
+body.addEventListener("mouseup", (e) => {
+  if (body.clientWidth < 1200) {
+    if (
+      !e.target.matches(".search-icon") ||
+      !e.target.matches(".search-input")
+    ) {
+      searchInput.classList.remove("onFocus");
+      searchBarOpen = false;
+    }
+  }
+  return;
 });
 
-//分頁 
-// show_tabct、show_tab=>顯示內容
-// var tab_on = $(".tab_title li");
-// tab_on.click(function(){
-// 	var nm = $(this).index();
-// 	$(".tab_content").eq(nm).addClass('show_tabct').siblings().removeClass('show_tabct');
-// 	$(this).addClass('show_tab').siblings().removeClass('show_tab');
-// });
+// goTop.addEventListener("click", scrollToTop);
 
-var $window = $(window);
-$window.on('scroll', function () {
-
-	if ($window.scrollTop() > 0) {
-		$(".gotop").addClass('show');
-	} else {
-		$(".gotop").removeClass('show');
-	}
-}).scroll();
-
-$(".gotop").click(function () {
-	$("html, body").animate({
-		scrollTop: 0 //屬性
-	});
-	return false;
-});
-
+// function scrollToTop() {
+//   window.scrollTo({ top: 0, behavior: "smooth" });
+// }

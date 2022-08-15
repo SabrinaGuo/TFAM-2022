@@ -1,0 +1,105 @@
+@charset "UTF-8";
+/* flex */
+/* size */
+/* 置中 */
+/* 動畫效果 */
+/* text */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap");
+/* font */
+/* radius */
+/* image url */
+/* ------- media query ------- */
+.header-intro {
+  position: relative;
+  background: #ffffff url("../images/kv-intro-banner@2x.png") left bottom no-repeat;
+  background-size: 91.5% auto;
+  height: 100vh;
+}
+
+.header-intro .header-top {
+  top: 30px;
+}
+
+.header-intro .header-title {
+  width: 100%;
+  left: 50%;
+  top: 36%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-height: 420px) {
+  .header-intro {
+    height: 540px;
+  }
+}
+
+@media (min-width: 992px) {
+  .header-intro .header-top {
+    top: 50px;
+  }
+  .header-intro .header-title {
+    width: 100%;
+    left: 50%;
+    top: 36%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header-intro {
+    height: 100vh;
+  }
+  .header-intro .header-top {
+    top: 30px;
+  }
+  .header-intro .header-title {
+    width: 100%;
+    left: 50%;
+    top: 36%;
+  }
+}
+
+.lang-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 100%;
+  padding-top: 56px;
+}
+
+.lang-box a {
+  padding: 0 50px;
+  color: #000000;
+  font-size: 1.125rem;
+}
+
+.lang-box a + a {
+  border-left: 1px solid #000;
+}
+
+@media (min-width: 1200px) {
+  .lang-box a:hover {
+    color: #5263ff;
+  }
+}
+/*# sourceMappingURL=intro.css.map */

@@ -4,8 +4,162 @@
 /* 置中 */
 /* 動畫效果 */
 /* text */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap");
 /* font */
 /* radius */
 /* image url */
 /* ------- media query ------- */
+.exhibition-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.exhibition-list li {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 0 50px 0;
+}
+
+.exhibition-list li figure {
+  width: 100%;
+}
+
+.exhibition-list li figure img {
+  width: 100%;
+}
+
+.exhibition-list li .date {
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.exhibition-list li .date p {
+  font-size: 1.75rem;
+  font-weight: bold;
+  line-height: 1;
+  text-align: left;
+  color: #5263ff;
+  max-width: calc(100% - 35px);
+  width: 100%;
+}
+
+.exhibition-list li .date .arrow-icon {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  border: solid 1px #838383;
+  border-radius: 50%;
+}
+
+.exhibition-list li .date .arrow-icon img {
+  display: inline-block;
+  width: 19px;
+}
+
+.exhibition-list li .detail-list {
+  border-top: 1px solid #838383;
+}
+
+.exhibition-list li .detail-list li {
+  max-width: 100%;
+  width: 100%;
+  border-bottom: 1px solid #838383;
+  font-size: 1.125rem;
+  line-height: 1.29;
+  color: #666666;
+  margin: 0;
+}
+
+.exhibition-list li .detail-list li a {
+  word-break: break-word;
+  display: block;
+  padding: 14px 0;
+  color: inherit;
+  -webkit-transition-duration: 0.5s;
+       -o-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+}
+
+@media (min-width: 576px) {
+  .exhibition-list li {
+    max-width: calc((100% - 100px) / 2);
+    margin: 0 25px 50px;
+  }
+  .exhibition-list .date {
+    padding: 20px 0;
+  }
+  .exhibition-list .date p {
+    font-size: 1.875rem;
+  }
+  .exhibition-list .detail-list li {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .exhibition-list li {
+    max-width: calc((100% - 150px) / 3);
+    margin: 0 25px 100px;
+  }
+  .exhibition-list .date {
+    padding: 20px 0;
+  }
+  .exhibition-list .date p {
+    font-size: 2rem;
+  }
+  .exhibition-list .detail-list li {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .exhibition-list li {
+    max-width: calc((100% - 200px) / 4);
+  }
+  .exhibition-list .date {
+    padding: 20px 0;
+  }
+  .exhibition-list .date p {
+    font-size: 2rem;
+  }
+  .exhibition-list .detail-list li {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .exhibition-list .date {
+    padding: 24px 0;
+  }
+  .exhibition-list .detail-list li {
+    font-size: 1.25rem;
+  }
+  .exhibition-list .detail-list li:hover a {
+    background-color: #5263ff;
+    color: #ffffff;
+  }
+}
 /*# sourceMappingURL=index.css.map */
