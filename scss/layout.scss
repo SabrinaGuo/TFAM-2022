@@ -45,9 +45,10 @@ a {
 .acc {
   color: $text-color-black;
   font-size: 0.775rem;
-  display: inline-block;
+  display: none;
   height: 16px;
   @include media-breakpoint-up("xl") {
+    display: inline-block;
     // height: auto;
     &:hover {
       color: $text-color-black;
@@ -87,6 +88,7 @@ a {
   .logo {
     max-width: 28px;
     width: 100%;
+    display: inline-block;
     margin-left: 10px;
     img {
       width: 100%;
@@ -230,14 +232,14 @@ a {
   display: block;
   padding: 0 30px;
   @include flex-style(start, center, nowrap);
-  h1 {
+  .name-ti {
     font-size: $font-lg; //36px
     font-weight: bold;
     letter-spacing: 19px;
     text-align: justify;
     color: $text-color-black;
   }
-  h2 {
+  .name-subti {
     font-size: $font-md;
     font-weight: bold;
     letter-spacing: 0px;
@@ -257,11 +259,11 @@ a {
   }
   @include media-breakpoint-up("lg") {
     top: 61%;
-    h1 {
+    .name-ti {
       font-size: 3.375rem; //54px
       letter-spacing: 51.46px;
     }
-    h2 {
+    .name-subti {
       font-size: $font-lg;
       margin-top: 8px;
       span {
@@ -273,11 +275,11 @@ a {
   @include media-breakpoint-up("xl") {
     top: 60%;
     // margin-top: 458px;
-    h1 {
+    .name-ti {
       font-size: $font-xxxl;
       letter-spacing: 41.46px;
     }
-    h2 {
+    .name-subti {
       font-size: $font-xl;
       margin-top: 8px;
       letter-spacing: 0.46px;

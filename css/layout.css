@@ -678,11 +678,14 @@ a:focus {
 .acc {
   color: #000000;
   font-size: 0.775rem;
-  display: inline-block;
+  display: none;
   height: 16px;
 }
 
 @media (min-width: 1200px) {
+  .acc {
+    display: inline-block;
+  }
   .acc:hover {
     color: #000000;
   }
@@ -751,6 +754,7 @@ a:focus {
 .logo-box .logo {
   max-width: 28px;
   width: 100%;
+  display: inline-block;
   margin-left: 10px;
 }
 
@@ -959,7 +963,7 @@ a:focus {
       flex-wrap: nowrap;
 }
 
-.header-title h1 {
+.header-title .name-ti {
   font-size: 2.25rem;
   font-weight: bold;
   letter-spacing: 19px;
@@ -967,7 +971,7 @@ a:focus {
   color: #000000;
 }
 
-.header-title h2 {
+.header-title .name-subti {
   font-size: 1.25rem;
   font-weight: bold;
   letter-spacing: 0px;
@@ -976,7 +980,7 @@ a:focus {
   margin-top: 8px;
 }
 
-.header-title h2 span {
+.header-title .name-subti span {
   font-size: 1.25rem;
   font-weight: bold;
   letter-spacing: 0.2px;
@@ -994,15 +998,15 @@ a:focus {
   .header-title {
     top: 61%;
   }
-  .header-title h1 {
+  .header-title .name-ti {
     font-size: 3.375rem;
     letter-spacing: 51.46px;
   }
-  .header-title h2 {
+  .header-title .name-subti {
     font-size: 2.25rem;
     margin-top: 8px;
   }
-  .header-title h2 span {
+  .header-title .name-subti span {
     font-size: 2.25rem;
     color: #5263ff;
   }
@@ -1012,16 +1016,16 @@ a:focus {
   .header-title {
     top: 60%;
   }
-  .header-title h1 {
+  .header-title .name-ti {
     font-size: 5.625rem;
     letter-spacing: 41.46px;
   }
-  .header-title h2 {
+  .header-title .name-subti {
     font-size: 2.8125rem;
     margin-top: 8px;
     letter-spacing: 0.46px;
   }
-  .header-title h2 span {
+  .header-title .name-subti span {
     font-size: 2.8125rem;
     color: #5263ff;
     letter-spacing: 0.46px;

@@ -65,3 +65,36 @@ body.addEventListener("mouseup", (e) => {
 // function scrollToTop() {
 //   window.scrollTo({ top: 0, behavior: "smooth" });
 // }
+function hiddenPlaceholder($currenSelect) {
+  var $isCurrenSelected =
+    $currenSelect.querySelector(".select-single").innerText;
+  if ($isCurrenSelected) {
+    $currenSelect.querySelector(".select-placeholder").classList.add("d-none");
+  }
+}
+
+function setSelected(currenSelect) {
+  var currenCotent = currenSelect.querySelector(".select-content");
+  var currenCotentItem = currenCotent.querySelectorAll(".select-item");
+  currenCotentItem.forEach((clickItem) => {
+    clickItem.onclick = function () {
+      currenCotentItem.forEach(function (ele) {
+        ele.classList.remove("active");
+      });
+      currenSelect.querySelector(".select-single").innerText = this.innerText;
+      this.classList.add("active");
+      hiddenPlaceholder(currenSelect);
+    };
+  });
+}
+
+function bsSelect() {
+  var $selects = document.querySelectorAll(".bs-select");
+  $selects.forEach((item) => {
+    hiddenPlaceholder(item);
+    setSelected(item);
+  });
+}
+document.addEventListener("DOMContentLoaded", function () {
+  bsSelect();
+});
