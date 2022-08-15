@@ -10,6 +10,9 @@
 /* image url */
 /* ------- media query ------- */
 .exhibition-list {
+  max-width: 1700px;
+  width: 100%;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

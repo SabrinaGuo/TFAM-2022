@@ -3,6 +3,9 @@
 //===== 以上共用 =====
 
 .exhibition-list {
+  max-width: 1700px;
+  width: 100%;
+  margin: 0 auto;
   @include flex-style(start, stretch, wrap);
   li {
     max-width: 100%;
