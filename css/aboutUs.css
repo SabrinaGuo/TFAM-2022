@@ -42,7 +42,7 @@
 }
 
 .about-content p {
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 2;
   text-align: justify;
   color: #000000;
@@ -51,9 +51,13 @@
 @media (min-width: 768px) {
   .about-name {
     max-width: 20%;
+    font-size: 1.125rem;
   }
   .about-content {
     max-width: 80%;
+  }
+  .about-content p {
+    font-size: 1rem;
   }
 }
 
@@ -64,11 +68,28 @@
   .about-content {
     max-width: 100%;
   }
+  .about-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .about-name {
+    max-width: 20%;
+    font-size: 1.375rem;
+  }
+  .about-content {
+    max-width: 80%;
+  }
+  .about-content p {
+    font-size: 1.125rem;
+  }
 }
 
 @media (min-width: 1400px) {
   .about-name {
     max-width: calc(100% - 1200px);
+    font-size: 1.5rem;
   }
   .about-content {
     max-width: 1200px;
@@ -250,11 +271,11 @@
 
 .ex-list {
   list-style: disc;
-  padding-left: 30px;
+  padding-left: 20px;
 }
 
 .ex-list li {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
@@ -262,6 +283,21 @@
   letter-spacing: normal;
   text-align: justify;
   color: #000000;
+}
+
+@media (min-width: 768px) {
+  .ex-list {
+    padding-left: 30px;
+  }
+  .ex-list li {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ex-list li {
+    font-size: 1.25rem;
+  }
 }
 
 .ex-link {
@@ -274,7 +310,7 @@
   display: inline-block;
   color: #5263ff;
   vertical-align: middle;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1.71;
 }
 
@@ -283,13 +319,32 @@
   margin-left: 6px;
 }
 
+@media (min-width: 768px) {
+  .ex-link span {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ex-link {
+    padding-left: 30px;
+  }
+  .ex-link span {
+    font-size: 1.25rem;
+  }
+  .ex-link span img {
+    width: 18px;
+    margin-left: 6px;
+  }
+}
+
 .guide-list {
   list-style: disc;
   padding-left: 30px;
 }
 
 .guide-list li {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
@@ -297,7 +352,24 @@
   letter-spacing: normal;
   text-align: justify;
   color: #000000;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .guide-list li {
+    font-size: 1.125rem;
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .guide-list {
+    padding-left: 30px;
+  }
+  .guide-list li {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+  }
 }
 
 .guide-links {
@@ -316,8 +388,8 @@
 }
 
 .guide-links .link-content {
-  margin-right: 50px;
-  margin-top: 40px;
+  margin-right: 30px;
+  margin-top: 20px;
 }
 
 .guide-links .btn-link {
@@ -325,8 +397,8 @@
   border: solid 2px #5263ff;
   background-color: #5263ff;
   color: #ffffff;
-  padding: 12px 25px;
-  font-size: 1.25rem;
+  padding: 12px 16px;
+  font-size: 1rem;
   -webkit-transition-duration: 0.5s;
        -o-transition-duration: 0.5s;
           transition-duration: 0.5s;
@@ -337,12 +409,12 @@
 
 .guide-links .sub-link {
   padding-top: 10px;
-  padding-left: 25px;
+  padding-left: 18px;
 }
 
 .guide-links .sub-link a {
   display: block;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 300;
   line-height: 1;
   color: #010101;
@@ -356,10 +428,30 @@
 }
 
 @media (min-width: 1200px) {
+  .guide-links {
+    padding-bottom: 40px;
+  }
+  .guide-links .link-content {
+    margin-right: 50px;
+    margin-top: 40px;
+  }
+  .guide-links .btn-link {
+    color: #ffffff;
+    padding: 12px 25px;
+    font-size: 1.25rem;
+  }
   .guide-links .btn-link:hover {
     background-color: #ffffff;
     color: #5263ff;
     text-decoration: none;
+  }
+  .guide-links .sub-link {
+    padding-top: 10px;
+    padding-left: 25px;
+  }
+  .guide-links .sub-link a {
+    font-size: 1.25rem;
+    padding: 6px 0;
   }
   .guide-links .sub-link a:hover {
     color: #5263ff;
