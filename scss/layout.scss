@@ -480,6 +480,18 @@ footer {
 .footer-text {
   font-size: $font-normal;
   color: #808080;
+  a {
+    display: block;
+    color: inherit;
+    @include tran(0.5s);
+  }
+  @include media-breakpoint-up("xl") {
+    a {
+      &:hover {
+        color: $text-color-primary;
+      }
+    }
+  }
 }
 .footer-logo-group {
   padding-top: 30px;

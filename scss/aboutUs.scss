@@ -237,3 +237,65 @@
     }
   }
 }
+//================== guide ===============
+.guide-list {
+  list-style: disc;
+  padding-left: 30px;
+  li {
+    font-size: $font-md;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    text-align: justify;
+    color: $text-color-black;
+    margin-bottom: 30px;
+  }
+}
+.guide-links {
+  padding-bottom: 40px;
+  @include flex-style(start, start, wrap);
+  .link-content {
+    margin-right: 50px;
+    margin-top: 40px;
+  }
+  .btn-link {
+    display: inline-block;
+    border: solid 2px $color-primary;
+    background-color: $color-primary;
+    color: #ffffff;
+    padding: 12px 25px;
+    font-size: $font-md;
+    @include tran(0.5s);
+  }
+  .sub-link {
+    padding-top: 10px;
+    padding-left: 25px;
+    a {
+      display: block;
+      font-size: $font-md;
+      font-weight: 300;
+      line-height: 1;
+      color: #010101;
+      padding: 6px 0;
+      @include tran(0.5s);
+    }
+  }
+  @include media-breakpoint-up("xl") {
+    .btn-link {
+      &:hover {
+        background-color: #ffffff;
+        color: $text-color-primary;
+        text-decoration: none;
+      }
+    }
+    .sub-link {
+      a {
+        &:hover {
+          color: $text-color-primary;
+        }
+      }
+    }
+  }
+}

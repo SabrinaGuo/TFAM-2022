@@ -1292,6 +1292,23 @@ footer .acc {
   color: #808080;
 }
 
+.footer-text a {
+  display: block;
+  color: inherit;
+  -webkit-transition-duration: 0.5s;
+       -o-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+}
+
+@media (min-width: 1200px) {
+  .footer-text a:hover {
+    color: #5263ff;
+  }
+}
+
 .footer-logo-group {
   padding-top: 30px;
   display: -webkit-box;

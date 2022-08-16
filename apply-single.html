@@ -8,7 +8,7 @@
   <title>申請展覽頁面 - 單筆</title>
   <link rel="stylesheet" href="./css/bootstrap.min.css" />
   <link rel="stylesheet" href="./css/layout.css" />
-  <link rel="stylesheet" href="./css/index.css" />
+  <link rel="stylesheet" href="./css/apply.css" />
 </head>
 
 <body>
@@ -16,9 +16,11 @@
     <div class="header-top">
       <div class="logo-box">
         <a href="#top-logo" accesskey="U" id="top-logo" class="acc" title=":::上方選單區導盲磚" tabindex="2">:::</a>
-        <a href="./index.html" class="logo">
-          <img src="./images/logo@2x.png" alt="台北市立美術館標誌" />
-        </a>
+        <h1>
+          <a href="./index.html" class="logo">
+            <img src="./images/logo@2x.png" alt="台北市立美術館標誌" />
+          </a>
+        </h1>
       </div>
       <div class="search-guide">
         <form class="search-box">
@@ -36,8 +38,8 @@
     <div class="header-title">
       <div class="place-name">北美館</div>
       <div>
-        <h1>展覽資料庫</h1>
-        <h2><span>TFAM</span> EXHIBITION ARCHIVE</h2>
+        <h2 class="name-ti">展覽資料庫</h2>
+        <h3 class="name-subti"><span>TFAM</span> EXHIBITION ARCHIVE</h3>
       </div>
     </div>
     <nav>
@@ -53,219 +55,146 @@
   </header>
   <main class="main-content">
     <a href="#center-content" accesskey="C" id="center-content" class="acc" title=":::中間內容區導盲磚">:::</a>
-    <ul class="exhibition-list">
-      <li>
-        <figure>
-          <img src="./images/about-image1@2x.png" alt="展覽縮圖">
-        </figure>
-        <div class="date">
-          <p>北美館建築</p>
-          <a href="javascript:;" class="arrow-icon d-none" title="查看更多">
-            <img src="./images/arrow@2x.png" alt="查看更多標誌">
-          </a>
+    <div class="apply-wrap">
+      <div class="tag">1985</div>
+      <div class="apply-content">
+        <div class="apply-name">
+          <h1>1985中華民國現代雕塑特展</h1>
+          <h2>The Contemporary Sculpture Exhibition, R.O.C.</h2>
+          <h3>1985/03/24 ~1985/06/23</h3>
         </div>
-        <ul class="detail-list d-none">
-          <li><a href="javascript:;" title="更多細節"></a></li>
-        </ul>
-      </li>
-      <li>
-        <figure>
-          <img src="./images/about-image2@2x.png" alt="展覽縮圖">
-        </figure>
-        <div class="date">
-          <p>1983</p>
-          <a href="javascript:;" class="arrow-icon" title="查看更多">
-            <img src="./images/arrow@2x.png" alt="查看更多標誌">
-          </a>
+        <div class="apply-dropdowns">
+          <div class="dropdown bs-select">
+            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+              <div class="select-tags">
+                <div class="select-placeholder">展覽</div>
+                <div class="select-single"></div>
+              </div>
+            </button>
+            <div class="dropdown-menu select-content">
+              <a class="dropdown-item select-item" href="javascript:;" title="作品清單">作品清單</a>
+              <a class="dropdown-item select-item" href="javascript:;" title="空間資訊">空間資訊</a>
+              <a class="dropdown-item select-item" href="javascript:;" title="展出現場">展出現場</a>
+            </div>
+          </div>
+          <div class="dropdown bs-select">
+            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+              <div class="select-tags">
+                <div class="select-placeholder">文宣/出版</div>
+                <div class="select-single"></div>
+              </div>
+            </button>
+            <div class="dropdown-menu select-content">
+              <a class="dropdown-item select-item" href="javascript:;" title="票券/門票">票券/門票</a>
+              <a class="dropdown-item select-item" href="javascript:;" title="邀請卡">邀請卡</a>
+              <a class="dropdown-item select-item" href="javascript:;" title="海報">海報</a>
+              <a class="dropdown-item select-item" href="javascript:;" title="展覽說明書">展覽說明書</a>
+              <a class="dropdown-item select-item" href="javascript:;" title="導覽手冊">導覽手冊</a>
+              <a class="dropdown-item select-item" href="javascript:;" title="學習手冊">學習手冊</a>
+              <a class="dropdown-item select-item" href="javascript:;" title="美術館導覽畫集">美術館導覽畫集</a>
+              <a class="dropdown-item select-item" href="javascript:;" title="展覽專輯">展覽專輯</a>
+            </div>
+          </div>
+          <div class="dropdown bs-select">
+            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+              <div class="select-tags">
+                <div class="select-placeholder">公關宣傳</div>
+                <div class="select-single"></div>
+              </div>
+            </button>
+            <div class="dropdown-menu select-content">
+              <a class="dropdown-item select-item" href="javascript:;" title="開幕/記者會">開幕/記者會</a>
+              <a class="dropdown-item select-item" href="javascript:;" title="頒獎">頒獎</a>
+              <a class="dropdown-item select-item" href="javascript:;" title="新聞稿">新聞稿</a>
+            </div>
+          </div>
+          <div class="dropdown bs-select">
+            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+              <div class="select-tags">
+                <div class="select-placeholder">評論/報導</div>
+                <div class="select-single"></div>
+              </div>
+            </button>
+            <div class="dropdown-menu select-content">
+              <a class="dropdown-item select-item" href="javascript:;" title="現代美術/學報">現代美術/學報</a>
+              <a class="dropdown-item select-item" href="javascript:;" title="媒體報導">媒體報導</a>
+            </div>
+          </div>
+          <div class="dropdown bs-select">
+            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+              <div class="select-tags">
+                <div class="select-placeholder">活動</div>
+                <div class="select-single"></div>
+              </div>
+            </button>
+            <div class="dropdown-menu select-content">
+              <a class="dropdown-item select-item" href="javascript:;" title="演講">演講</a>
+              <a class="dropdown-item select-item" href="javascript:;" title="座談">座談</a>
+              <a class="dropdown-item select-item" href="javascript:;" title="研討會">研討會</a>
+              <a class="dropdown-item select-item" href="javascript:;" title="導覽">導覽</a>
+              <a class="dropdown-item select-item" href="javascript:;" title="創作體驗">創作體驗</a>
+              <a class="dropdown-item select-item" href="javascript:;" title="藝文展演">藝文展演</a>
+            </div>
+          </div>
         </div>
-        <ul class="detail-list d-none">
-          <li><a href="javascript:;" title="更多細節"></a></li>
-        </ul>
-      </li>
-      <li>
-        <figure>
-          <img src="./images/about-image3@2x.png" alt="展覽縮圖">
-        </figure>
-        <div class="date">
-          <p>1984</p>
-          <a href="javascript:;" class="arrow-icon" title="查看更多">
-            <img src="./images/arrow@2x.png" alt="查看更多標誌">
-          </a>
+        <div class="apply-pic">
+          <figure>
+            <img src="./images/sample-img1.jpg" alt="">
+          </figure>
         </div>
-        <ul class="detail-list">
-          <li><a href="javascript:;" title="更多細節">1984中國現代繪畫新展望</a></li>
-          <li><a href="javascript:;" title="更多細節">法國VIDEO藝術聯展</a></li>
-        </ul>
-      </li>
-      <li>
-        <figure>
-          <img src="./images/about-image4@2x.png" alt="展覽縮圖">
-        </figure>
-        <div class="date">
-          <p>1985</p>
-          <a href="javascript:;" class="arrow-icon" title="查看更多">
-            <img src="./images/arrow@2x.png" alt="查看更多標誌">
-          </a>
-        </div>
-        <ul class="detail-list">
-          <li><a href="javascript:;" title="更多細節">1985中華民國現代雕塑特展</a></li>
-          <li><a href="javascript:;" title="更多細節">中國建築之美特展</a></li>
-          <li><a href="javascript:;" title="更多細節">色彩與造形 - 前衛‧裝置‧空間特展</a></li>
-          <li><a href="javascript:;" title="更多細節">德國現代美術展1945-1985</a></li>
-        </ul>
-      </li>
-      <li>
-        <figure>
-          <img src="./images/about-image5@2x.png" alt="展覽縮圖">
-        </figure>
-        <div class="date">
-          <p>1986</p>
-          <a href="javascript:;" class="arrow-icon" title="查看更多">
-            <img src="./images/arrow@2x.png" alt="查看更多標誌">
-          </a>
-        </div>
-        <ul class="detail-list">
-          <li><a href="javascript:;" title="更多細節">中國現代繪畫回顧展</a></li>
-          <li><a href="javascript:;" title="更多細節">印象派素描展：<br />
-              第十四屆米羅國際素描展</a></li>
-          <li><a href="javascript:;" title="更多細節">早期畫家作品展 - 石川欽一郎師生特展</a></li>
-        </ul>
-      </li>
-      <li>
-        <figure>
-          <img src="./images/about-image6@2x.png" alt="展覽縮圖">
-        </figure>
-        <div class="date">
-          <p>1987</p>
-          <a href="javascript:;" class="arrow-icon" title="查看更多">
-            <img src="./images/arrow@2x.png" alt="查看更多標誌">
-          </a>
-        </div>
-        <ul class="detail-list">
-          <li><a href="javascript:;" title="更多細節">眼鏡蛇藝術群(1949-1951)及其十年後
-              之發展</a></li>
-          <li><a href="javascript:;" title="更多細節">實驗藝術 - 行為與空間展</a></li>
-          <li><a href="javascript:;" title="更多細節">科技裡的詩情 - 德國現代雕塑展</a></li>
-          <li><a href="javascript:;" title="更多細節">1949-1986 查理摩爾建築藝術展</a></li>
-        </ul>
-      </li>
-      <li>
-        <figure>
-          <img src="./images/about-image7@2x.png" alt="展覽縮圖">
-        </figure>
-        <div class="date">
-          <p>1988</p>
-          <a href="javascript:;" class="arrow-icon" title="查看更多">
-            <img src="./images/arrow@2x.png" alt="查看更多標誌">
-          </a>
-        </div>
-        <ul class="detail-list">
-          <li><a href="javascript:;" title="更多細節">中國─巴黎：早期旅法畫家回顧展</a></li>
-          <li><a href="javascript:;" title="更多細節">德國拼貼藝術展</a></li>
-          <li><a href="javascript:;" title="更多細節">德國「新藝術運動」展 1890-1925</a></li>
-          <li><a href="javascript:;" title="更多細節">達達的世界</a></li>
-        </ul>
-      </li>
-      <li>
-        <figure>
-          <img src="./images/about-image8@2x.png" alt="展覽縮圖">
-        </figure>
-        <div class="date">
-          <p>1989</p>
-          <a href="javascript:;" class="arrow-icon" title="查看更多">
-            <img src="./images/arrow@2x.png" alt="查看更多標誌">
-          </a>
-        </div>
-        <ul class="detail-list">
-          <li><a href="javascript:;" title="更多細節">畢卡索橡膠版畫展</a></li>
-          <li><a href="javascript:;" title="更多細節">包浩斯 1919-1933</a></li>
-        </ul>
-      </li>
-      <li>
-        <figure>
-          <img src="./images/about-image9@2x.png" alt="展覽縮圖">
-        </figure>
-        <div class="date">
-          <p>1990</p>
-          <a href="javascript:;" class="arrow-icon" title="查看更多">
-            <img src="./images/arrow@2x.png" alt="查看更多標誌">
-          </a>
-        </div>
-        <ul class="detail-list">
-          <li><a href="javascript:;" title="更多細節">台灣早期西洋美術回顧展</a></li>
-          <li><a href="javascript:;" title="更多細節">保羅‧德爾沃的超現實世界</a></li>
-          <li><a href="javascript:;" title="更多細節">尼斯地區當代藝術展</a></li>
-        </ul>
-      </li>
-      <li>
-        <figure>
-          <img src="./images/about-image10@2x.png" alt="展覽縮圖">
-        </figure>
-        <div class="date">
-          <p>1991</p>
-          <a href="javascript:;" class="arrow-icon" title="查看更多">
-            <img src="./images/arrow@2x.png" alt="查看更多標誌">
-          </a>
-        </div>
-        <ul class="detail-list">
-          <li><a href="javascript:;" title="更多細節">心象與物象 - 美國新抽象</a></li>
-          <li><a href="javascript:;" title="更多細節">比利時當代藝術展</a></li>
-          <li><a href="javascript:;" title="更多細節">台北─紐約：現代藝術的遇合</a></li>
-          <li><a href="javascript:;" title="更多細節">米羅的夢幻世界</a></li>
-        </ul>
-      </li>
-      <li>
-        <figure>
-          <img src="./images/about-image11@2x.png" alt="展覽縮圖">
-        </figure>
-        <div class="date">
-          <p>1992</p>
-          <a href="javascript:;" class="arrow-icon" title="查看更多">
-            <img src="./images/arrow@2x.png" alt="查看更多標誌">
-          </a>
-        </div>
-        <ul class="detail-list">
-          <li><a href="javascript:;" title="更多細節">1992台北現代美術雙年展</a></li>
-          <li><a href="javascript:;" title="更多細節">阿雷欽斯基版畫回顧展</a></li>
-          <li><a href="javascript:;" title="更多細節">延續與斷裂 - 宗教‧巫術‧自然</a></li>
-          <li><a href="javascript:;" title="更多細節">江兆申書畫展</a></li>
-        </ul>
-      </li>
-      <li>
-        <figure>
-          <img src="./images/about-image12@2x.png" alt="展覽縮圖">
-        </figure>
-        <div class="date">
-          <p>1993</p>
-          <a href="javascript:;" class="arrow-icon" title="查看更多">
-            <img src="./images/arrow@2x.png" alt="查看更多標誌">
-          </a>
-        </div>
-        <ul class="detail-list">
-          <li><a href="javascript:;" title="更多細節">羅丹雕塑展</a></li>
-          <li><a href="javascript:;" title="更多細節">台灣美術新風貌 1945-1993</a></li>
-          <li><a href="javascript:;" title="更多細節">荷蘭當代錄影藝術展</a></li>
-          <li><a href="javascript:;" title="更多細節">文化與認同：澳洲當代藝術展</a></li>
-        </ul>
-      </li>
-      <li>
-        <figure>
-          <img src="./images/about-image13@2x.png" alt="展覽縮圖">
-        </figure>
-        <div class="date">
-          <p>1994</p>
-          <a href="javascript:;" class="arrow-icon" title="查看更多">
-            <img src="./images/arrow@2x.png" alt="查看更多標誌">
-          </a>
-        </div>
-        <ul class="detail-list">
-          <li><a href="javascript:;" title="更多細節">1994台北現代美術雙年展</a></li>
-          <li><a href="javascript:;" title="更多細節">陳澄波百年紀念展</a></li>
-          <li><a href="javascript:;" title="更多細節">劉錦堂百年紀念展</a></li>
-          <li><a href="javascript:;" title="更多細節">安迪‧沃荷 1928-1987</a></li>
-        </ul>
-      </li>
-    </ul>
+      </div>
+      <div class="apply-content">
+        <section>
+          <p>美術館本身在建築造形與設計上，即為一件卓越的立體藝術品，而在空間架構中，多處
+            雕塑中庭的設置，使美術館成為國內陳列雕塑作品的最佳場所。從開館展所邀請的參展
+            作品中，無論質與量，都達到國內前所未有的盛況。藝術家無不以能就美術館現有適當
+            場地而設計自己的作品展出為榮。無疑美術館的成立，足以刺激近二年來雕刻家們的創
+            作創造慾望，而美術館亦以推廣美術為己任。中國現代雕塑展，便在這一理想下籌劃實
+            施。</p>
+          <p>在這次入選作品中，欣見國內雕塑水準普遍提昇， 不但製作縝密，手法奔放，並充分利
+            用不同的素材，觀念上更能摒棄西方的影響，從傳統文化中獲得自我的創作意匠。得大
+            獎的三位，雖各個素材不同，但都能拋却放置台座的習例，著眼於三次元空間的探討，
+            或對宇宙人生哲理的尋求。他們所積極表達的創作觀，是對傳統雕塑的大突破，美術館
+            對他們作品的展出與認可，將使社會大眾學習接納這些新的風貌。相信由展覽場廣廣衍
+            為景觀的美術館本身在建築造形與設計上，即為一件卓越的立體藝術品，而在空間架構
+            中，多處雕塑中庭的設置，使美術館成為國內陳列雕塑作品的最佳場所。從開館展所邀
+            請的參展作品中，無論質與量，都達到國內前所未有的盛況。藝術家無不以能就美術館
+            現有適當場地而設計自己的作品展出為榮。無疑美術館的成立，足以刺激近二年來雕刻
+            家們的創作創造慾望，而美術館亦以推廣美術為己任。中國現代雕塑展，便在這一理想
+            下籌劃實施。</p>
+          <p>在這次入選作品中，欣見國內雕塑水準普遍提昇， 不但製作縝密，手法奔放，並充分利
+            用不同的素材，觀念上更能摒棄西方的影響，從傳統文化中獲得自我的創作意匠。得大
+            獎的三位，雖各個素材不同，但都能拋却放置台座的習例，著眼於三次元空間的探討，
+            或對宇宙人生哲理的尋求。他們所積極表達的創作觀，是對傳統雕塑的大突破，美術館</p>
+          <button class="more" title="查看更多按鈕">more +</button>
+        </section>
+        <section>
+          <div class="content-title">展出藝術家</div>
+          <div class="content-detail">林壽宇、黎志文、徐揚聰：大獎
+            王昱仁、胡坤榮、曹牙、張德輝、董振平：優選
+            林坤銘、林慶祥、林聰惠、周宜珍、許東榮、許禮憲、陳正勳、
+            陳芳明、陳實涵、陳獻輝、黃弘鎮、黃輝雄、游忠平、項明祥、
+            傅慶豊、楊作中、蕭祖銘、蘇為忠：入選、蒲浩明、鄭春雄、蔡
+            水林、劉聰慧、游忠平林坤銘、林慶祥、林聰惠、周宜珍、許東
+            榮、許禮憲、陳正勳、陳芳明、陳實涵、陳獻輝、黃弘鎮、黃輝
+            雄、游忠平、項明祥、傅慶豊、楊作中、蕭祖銘、蘇為忠：入選
+            、蒲浩明、鄭春雄、蔡水林、劉聰慧、游忠平
+            <button class="more" title="查看更多按鈕">more -</button>
+          </div>
+        </section>
+        <section>
+          <div class="content-title">相關人</div>
+          <div class="content-detail">蘇瑞屏、陳夏雨、楊英風、漢寶德、王秀雄、呂清夫:評審委員</div>
+        </section>
+
+
+
+
+
+
+
+      </div>
+    </div>
   </main>
   <footer>
     <a href="#footer-info" accesskey="B" id="footer-info" class="acc" title=":::下方內容區導盲磚">:::</a>
@@ -273,8 +202,8 @@
       <div class="footer-text">
         <p>臺北市立美術館 © 2010-2018 TFAM</p>
         <p>10461臺北市中山區中山北路三段181號</p>
-        <p class="mt-20">隱私權安全政策</p>
-        <p class="mt-20">政府網站資料開放宣告</p>
+        <a href="./privacy.html" title="隱私權安全政策" class="mt-20">隱私權安全政策</a>
+        <a href="./opening-info.html" title="政府網站資料開放宣告" class="mt-20">政府網站資料開放宣告</a>
       </div>
       <div class="footer-logo-group">
         <figure class="tpi-logo"><img src="./images/taipei-logo@2x.png" alt="台北市政府標誌"></figure>

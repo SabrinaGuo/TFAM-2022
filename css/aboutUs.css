@@ -282,4 +282,87 @@
   width: 18px;
   margin-left: 6px;
 }
+
+.guide-list {
+  list-style: disc;
+  padding-left: 30px;
+}
+
+.guide-list li {
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: normal;
+  text-align: justify;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+.guide-links {
+  padding-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.guide-links .link-content {
+  margin-right: 50px;
+  margin-top: 40px;
+}
+
+.guide-links .btn-link {
+  display: inline-block;
+  border: solid 2px #5263ff;
+  background-color: #5263ff;
+  color: #ffffff;
+  padding: 12px 25px;
+  font-size: 1.25rem;
+  -webkit-transition-duration: 0.5s;
+       -o-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+}
+
+.guide-links .sub-link {
+  padding-top: 10px;
+  padding-left: 25px;
+}
+
+.guide-links .sub-link a {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1;
+  color: #010101;
+  padding: 6px 0;
+  -webkit-transition-duration: 0.5s;
+       -o-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+}
+
+@media (min-width: 1200px) {
+  .guide-links .btn-link:hover {
+    background-color: #ffffff;
+    color: #5263ff;
+    text-decoration: none;
+  }
+  .guide-links .sub-link a:hover {
+    color: #5263ff;
+  }
+}
 /*# sourceMappingURL=aboutUs.css.map */

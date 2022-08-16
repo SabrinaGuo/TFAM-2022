@@ -135,6 +135,9 @@
   line-height: 1.71;
   font-weight: 300;
   color: $text-color-primary;
+  border: none;
+  background: transparent;
+  padding-left: 0;
 }
 .content {
   &-title {
