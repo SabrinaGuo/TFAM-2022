@@ -89,9 +89,14 @@ a {
     max-width: 28px;
     width: 100%;
     display: inline-block;
-    margin-left: 10px;
+
     img {
       width: 100%;
+    }
+  }
+  @include media-breakpoint-up("md") {
+    .logo {
+      max-width: 32px;
     }
   }
   @include media-breakpoint-up("lg") {
@@ -536,6 +541,308 @@ footer {
     padding: 30px;
     .acc {
       top: -90px;
+    }
+  }
+}
+
+//======================= more
+.more {
+  display: block;
+  font-size: $font-sm;
+  line-height: 1.71;
+  font-weight: 300;
+  color: $text-color-primary;
+  border: none;
+  background: transparent;
+  padding-left: 0;
+}
+//======================= pages-navgatio
+.pages-navgation {
+  margin-top: 35px;
+  @include flex-style(center, center, nowrap);
+  .arrow {
+    display: inline-block;
+    padding: 11px 9px;
+    img {
+      width: 26px;
+    }
+    &-prev {
+      transform: rotate(180deg);
+    }
+  }
+  ul {
+    padding: 0 4px;
+    @include flex-style(center, center, nowrap);
+    li {
+      position: relative;
+      margin: 0 3px;
+      &.active {
+        a {
+          color: #ffffff;
+          &::before {
+            content: "";
+          }
+        }
+      }
+      a {
+        color: $text-color-primary;
+        width: 40px;
+        text-align: center;
+        padding: 15px 0;
+        display: inline-block;
+        font-size: $font-md;
+        &::before {
+          content: none;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+          background-color: $color-primary;
+          z-index: -1;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up("xl") {
+    ul {
+      padding: 0 40px;
+      @include flex-style(center, center, nowrap);
+      li {
+        margin: 0 5px;
+        a {
+          width: 50px;
+          padding: 15px 0;
+          font-size: $font-md;
+          &::before {
+            width: 50px;
+            height: 50px;
+          }
+        }
+        &:hover {
+          a {
+            color: #ffffff;
+            &::before {
+              content: "";
+            }
+          }
+        }
+        a {
+          font-size: $font-md;
+        }
+      }
+    }
+  }
+}
+
+//================== triple-lists ===============
+.triple-lists {
+  list-style: none;
+  margin-top: 40px;
+  li {
+    display: inline-block;
+    margin: 5px 0;
+    &.active {
+      > a {
+        background-color: $color-primary;
+        span {
+          color: #ffffff;
+        }
+        .list-arrow {
+          figure {
+            background: url("./../images/arrow-dropdown.png") center no-repeat;
+            background-size: contain;
+          }
+        }
+      }
+    }
+    &.open {
+      > ul {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        z-index: 1;
+      }
+      > .third-lists {
+        position: static;
+      }
+    }
+    a {
+      display: inline-block;
+      padding: 7px 15px 15px;
+      border: solid 2px $color-primary;
+      background-color: #ffffff;
+      @include tran(0.5s);
+      span {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: $font-sm;
+        line-height: 1;
+        text-align: left;
+        color: $text-color-primary;
+        @include tran(0.5s);
+      }
+    }
+  }
+  .list-name {
+    margin-right: 10px;
+  }
+  .list-count {
+    color: $text-color-black;
+  }
+  .list-arrow {
+    width: 15px;
+    margin-left: 10px;
+    margin-top: 3px;
+    figure {
+      // @include tran(0.5s);
+      width: 100%;
+      height: 9px;
+      background: url("./../images/arrow-dropdown-hover.png") center no-repeat;
+      background-size: contain;
+    }
+  }
+  .sub-lists {
+    position: absolute;
+    padding-left: 30px;
+    z-index: -1;
+    transform: translateY(-5%);
+    opacity: 0;
+    visibility: hidden;
+    // @include tran(0.5s);
+    li {
+      display: block;
+    }
+  }
+  .third-lists {
+    position: absolute;
+    padding-left: 30px;
+    z-index: -1;
+    transform: translateY(-5%);
+    opacity: 0;
+    visibility: hidden;
+    // @include tran(0.5s);
+    li {
+      display: block;
+
+      a {
+        padding: 7px 10px 15px;
+      }
+    }
+  }
+  @include media-breakpoint-up("lg") {
+    li {
+      display: block;
+      a {
+        padding: 7px 24px 15px;
+        background-color: $color-primary;
+        span {
+          font-size: $font-sm;
+          color: #fff;
+        }
+      }
+      &.active {
+        > a {
+          background-color: #ffffff;
+          span {
+            color: $text-color-primary;
+          }
+          .list-arrow {
+            figure {
+              background: url("./../images/arrow-dropdown-hover.png") center
+                no-repeat;
+              background-size: contain;
+            }
+          }
+        }
+      }
+      &.open {
+        > ul {
+          position: static;
+          z-index: -1;
+        }
+      }
+    }
+    > li {
+      &:hover {
+        > a {
+          background-color: #ffffff;
+          span {
+            color: $text-color-primary;
+          }
+          .list-arrow {
+            figure {
+              background: url("./../images/arrow-dropdown-hover.png") center
+                no-repeat;
+              background-size: contain;
+            }
+          }
+        }
+        // > ul {
+        //   position: static;
+        //   transform: translateY(0);
+        //   opacity: 1;
+        //   visibility: visible;
+        // }
+      }
+    }
+    .list-arrow {
+      figure {
+        background: url("./../images/arrow-dropdown.png") center no-repeat;
+        background-size: contain;
+      }
+    }
+    .sub-lists {
+      li {
+        &:hover {
+          > a {
+            background-color: #ffffff;
+            span {
+              color: $text-color-primary;
+            }
+            .list-arrow {
+              figure {
+                background: url("./../images/arrow-dropdown-hover.png") center
+                  no-repeat;
+                background-size: contain;
+              }
+            }
+          }
+          // > ul {
+          //   position: static;
+          //   transform: translateY(0);
+          //   opacity: 1;
+          //   visibility: visible;
+          // }
+        }
+      }
+    }
+    .third-lists {
+      li {
+        &:hover {
+          > a {
+            background-color: #ffffff;
+            span {
+              color: $text-color-primary;
+            }
+            .list-arrow {
+              figure {
+                background: url("./../images/arrow-dropdown-hover.png") center
+                  no-repeat;
+                background-size: contain;
+              }
+            }
+          }
+          // > ul {
+          //   position: static;
+          //   transform: translateY(0);
+          //   opacity: 1;
+          //   visibility: visible;
+          // }
+        }
+      }
     }
   }
 }

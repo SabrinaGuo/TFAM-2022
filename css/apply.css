@@ -56,7 +56,7 @@
 }
 
 .apply-content p {
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.71;
   text-align: justify;
   color: #000000;
@@ -107,21 +107,21 @@
   margin-bottom: 10px;
 }
 
-.apply-name h1 {
+.apply-name h2 {
   font-size: 1.875rem;
   font-weight: bold;
   line-height: normal;
   color: #5263ff;
 }
 
-.apply-name h2 {
+.apply-name h3 {
   font-size: 1.125rem;
   font-weight: bold;
   line-height: 1.28;
   color: #5263ff;
 }
 
-.apply-name h3 {
+.apply-name h4 {
   font-size: 1rem;
   font-weight: bold;
   line-height: 2.29;
@@ -151,13 +151,13 @@
   .apply-name {
     margin-bottom: 40px;
   }
-  .apply-name h1 {
+  .apply-name h2 {
     font-size: 2.25rem;
   }
-  .apply-name h2 {
+  .apply-name h3 {
     font-size: 1.5rem;
   }
-  .apply-name h3 {
+  .apply-name h4 {
     font-size: 1rem;
   }
 }
@@ -172,26 +172,15 @@
   .apply-name {
     margin-top: 30px;
   }
-  .apply-name h1 {
-    font-size: 4rem;
-  }
   .apply-name h2 {
-    font-size: 2.75rem;
+    font-size: 3.875rem;
   }
   .apply-name h3 {
+    font-size: 2.625rem;
+  }
+  .apply-name h4 {
     font-size: 1.5rem;
   }
-}
-
-.more {
-  display: block;
-  font-size: 1.125rem;
-  line-height: 1.71;
-  font-weight: 300;
-  color: #5263ff;
-  border: none;
-  background: transparent;
-  padding-left: 0;
 }
 
 .content-title {

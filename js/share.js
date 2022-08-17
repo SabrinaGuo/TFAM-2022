@@ -65,6 +65,8 @@ body.addEventListener("mouseup", (e) => {
 // function scrollToTop() {
 //   window.scrollTo({ top: 0, behavior: "smooth" });
 // }
+
+// 兩層下拉選單 使用 drowdown 改寫 start
 function hiddenPlaceholder($currenSelect) {
   var $isCurrenSelected =
     $currenSelect.querySelector(".select-single").innerText;
@@ -97,4 +99,12 @@ function bsSelect() {
 }
 document.addEventListener("DOMContentLoaded", function () {
   bsSelect();
+});
+// 兩層下拉選單 使用 drowdown 改寫 end
+
+// 三層選單控制
+$(".triple-lists li").on("click", function (e) {
+  e.stopPropagation();
+  $(this).toggleClass("active open");
+  $(this).siblings().removeClass("active open");
 });
