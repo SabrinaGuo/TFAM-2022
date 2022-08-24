@@ -61,7 +61,7 @@ $(".third-lists li").on("click", function (e) {
   $(this).parents("li").removeClass("actve");
 });
 
-// //目前螢幕寬度
+//目前螢幕寬度
 function checkScreenWidth() {
   if ($(window).width() > 1024) {
     return "desk";
