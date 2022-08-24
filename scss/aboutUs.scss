@@ -1,15 +1,20 @@
-@import "_mixin";
 @import "_variable";
 //===== 以上共用 =====
-
+// 畫面左右切割約 ２：８ 或是 ３：７的頁面
+//================== aboutUs ===============
 .about {
   &-wrap {
+    position: relative;
+    z-index: 0;
     max-width: 1700px;
     width: 100%;
     margin: 0 auto;
     border-top: 1px solid #000;
     padding: 24px 0;
-    @include flex-style(start, start, wrap);
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: wrap;
   }
   &-name {
     width: 100%;
@@ -17,24 +22,25 @@
     font-weight: bold;
     line-height: normal;
     color: $text-color-primary;
-    padding-bottom: 20px;
+    // padding-bottom: 20px;
+    padding-bottom: 48px;
   }
   &-content {
     width: 100%;
     p {
       font-size: $font-normal;
       line-height: 2;
-      text-align: justify;
       color: $text-color-black;
     }
   }
-  @include media-breakpoint-up("md") {
+
+  @media (min-width: 768px) {
     &-name {
-      max-width: 20%;
+      max-width: 30%;
       font-size: 1.5rem; //24px
     }
     &-content {
-      max-width: 80%;
+      max-width: 70%;
       p {
         font-size: $font-sm;
       }
@@ -53,25 +59,25 @@
       }
     }
   }
-  @include media-breakpoint-up("lg") {
+  @media (min-width: 992px) {
     &-name {
-      max-width: 20%;
+      max-width: 30%;
       font-size: 1.5rem; //24px
     }
     &-content {
-      max-width: 80%;
+      max-width: 70%;
       p {
         font-size: $font-sm;
       }
     }
   }
-  @include media-breakpoint-up("xxl") {
+  @media (min-width: 1400px) {
     &-name {
-      max-width: calc(100% - 1200px);
+      // max-width: calc(100% - 1200px);
       font-size: 1.5rem; //24px
     }
     &-content {
-      max-width: 1200px;
+      // max-width: 1200px;
       p {
         font-size: $font-md;
       }
@@ -79,7 +85,7 @@
   }
 }
 .pic-box {
-  margin: 20px 0;
+  margin: 50px 0;
   &.full-img {
     max-width: 100%;
   }
@@ -87,7 +93,10 @@
     max-width: 100%;
   }
   &.group-img {
-    @include flex-style(start, start, wrap);
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: wrap;
     figure {
       max-width: 100%;
       width: 100%;
@@ -111,14 +120,17 @@
     width: 100%;
   }
 
-  @include media-breakpoint-up("md") {
+  @media (min-width: 768px) {
     &.float-right-img {
       float: right;
-      margin: 0 0 0 30px;
+      margin: 0 0 20px 50px;
     }
     &.float-left-img {
       float: left;
-      margin: 0 30px 0 0;
+      margin: 0 50px 20px 0;
+    }
+    &.sm-img {
+      max-width: 160px;
     }
     &.group-img {
       figure {
@@ -141,22 +153,21 @@
   }
   //手機版 橫式
   @media (max-height: 420px) {
-    margin: 20px 0;
     &.float-right-img {
       float: right;
-      margin: 0 0 0 15px;
+      margin: 0 0 0 50px;
     }
     &.float-left-img {
       float: left;
-      margin: 0 15px 0 0;
+      margin: 0 50px 0 0;
     }
     &.sm-img {
       max-width: 160px;
     }
     &.group-img {
       figure {
-        margin-top: 10px;
-        max-width: calc((100% - 10px) / 2);
+        margin-top: 40px;
+        max-width: calc((100% - 40px) / 2);
         &:first-of-type {
           margin-top: 0;
         }
@@ -164,13 +175,15 @@
           margin-top: 0;
         }
         &:nth-of-type(2n) {
-          margin-left: 10px;
+          margin-left: 40px;
         }
       }
     }
+    figcaption {
+      font-size: $font-normal;
+    }
   }
-  @include media-breakpoint-up("lg") {
-    margin: 40px 0;
+  @media (min-width: 992px) {
     &.float-right-img {
       margin: 0 0 0 40px;
     }
@@ -196,7 +209,17 @@
       }
     }
   }
-  @include media-breakpoint-up("xl") {
+  @media (min-width: 1200px) {
+    margin: 70px 0;
+    &.float-right-img {
+      margin: 0 0 20px 70px;
+    }
+    &.float-left-img {
+      margin: 0 70px 20px 0;
+    }
+    &.sm-img {
+      max-width: 375px;
+    }
     &.group-img {
       figure {
         max-width: calc((100% - 40px) / 2);
@@ -210,7 +233,7 @@
       }
     }
   }
-  @include media-breakpoint-up("xxl") {
+  @media (min-width: 1400px) {
     figcaption {
       font-size: $font-md;
     }
@@ -221,11 +244,10 @@
 }
 .about-sec {
   margin-bottom: 34px;
-  @include media-breakpoint-up("xl") {
+  @media (min-width: 1200px) {
     margin-bottom: 60px;
   }
 }
-
 //================== ex-type ===============
 .ex-list {
   list-style: disc;
@@ -240,13 +262,13 @@
     text-align: justify;
     color: $text-color-black;
   }
-  @include media-breakpoint-up("md") {
+  @media (min-width: 768px) {
     padding-left: 30px;
     li {
       font-size: $font-sm;
     }
   }
-  @include media-breakpoint-up("xl") {
+  @media (min-width: 1200px) {
     li {
       font-size: $font-md;
     }
@@ -261,18 +283,21 @@
     color: $text-color-primary;
     vertical-align: middle;
     font-size: $font-normal;
-    line-height: 1.71;
+    line-height: normal;
+    &:first-of-type {
+      border-bottom: 1px solid $color-primary;
+    }
     img {
       width: 18px;
       margin-left: 6px;
     }
   }
-  @include media-breakpoint-up("md") {
+  @media (min-width: 768px) {
     span {
       font-size: $font-sm;
     }
   }
-  @include media-breakpoint-up("xl") {
+  @media (min-width: 1200px) {
     padding-left: 30px;
     span {
       font-size: $font-md;
@@ -298,13 +323,13 @@
     color: $text-color-black;
     margin-bottom: 20px;
   }
-  @include media-breakpoint-up("md") {
+  @media (min-width: 768px) {
     li {
       font-size: $font-sm;
       margin-bottom: 30px;
     }
   }
-  @include media-breakpoint-up("xl") {
+  @media (min-width: 1200px) {
     padding-left: 30px;
     li {
       font-size: $font-md;
@@ -314,7 +339,10 @@
 }
 .guide-links {
   padding-bottom: 40px;
-  @include flex-style(start, start, wrap);
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: wrap;
   .link-content {
     margin-right: 30px;
     margin-top: 20px;
@@ -326,7 +354,7 @@
     color: #ffffff;
     padding: 12px 16px;
     font-size: $font-normal;
-    @include tran(0.5s);
+    transition: all 0.5s;
   }
   .sub-link {
     padding-top: 10px;
@@ -338,10 +366,10 @@
       line-height: 1;
       color: #010101;
       padding: 6px 0;
-      @include tran(0.5s);
+      transition: all 0.5s;
     }
   }
-  @include media-breakpoint-up("xl") {
+  @media (min-width: 1200px) {
     padding-bottom: 40px;
     .link-content {
       margin-right: 50px;
@@ -375,32 +403,32 @@
   position: relative;
   z-index: 0;
   padding-top: 18px;
-  .about-name {
-    max-width: 100%;
-    width: 100%;
-  }
-  .about-content {
-    max-width: 100%;
-    width: 100%;
-  }
+  // .about-name {
+  //   max-width: 100%;
+  //   width: 100%;
+  // }
+  // .about-content {
+  //   max-width: 100%;
+  //   width: 100%;
+  // }
 
-  @include media-breakpoint-up("lg") {
-    .about-name {
-      max-width: calc(100% - 644px);
-    }
-    .about-content {
-      max-width: 644px;
-    }
-  }
-  @include media-breakpoint-up("xl") {
-    .about-name {
-      max-width: calc(100% - 900px);
-    }
-    .about-content {
-      max-width: 900px;
-    }
-  }
-  // @include media-breakpoint-up("xxl") {
+  // @media (min-width: 992px) {
+  //   .about-name {
+  //     max-width: calc(100% - 644px);
+  //   }
+  //   .about-content {
+  //     max-width: 644px;
+  //   }
+  // }
+  // @media (min-width: 1200px) {
+  //   .about-name {
+  //     max-width: calc(100% - 900px);
+  //   }
+  //   .about-content {
+  //     max-width: 900px;
+  //   }
+  // }
+  // @media (min-width:1400px) {
   //   .about-name {
   //     max-width: calc(100% - 1050px);
   //   }
@@ -408,23 +436,23 @@
   //     max-width: 1050px;
   //   }
   // }
-  @include media-breakpoint-up("xxxl") {
-    .about-name {
-      max-width: calc(100% - 1200px);
-    }
-    .about-content {
-      max-width: 1200px;
-    }
-  }
+  // @media (min-width: 1500px) {
+  //   .about-name {
+  //     max-width: calc(100% - 1100px);
+  //   }
+  //   .about-content {
+  //     max-width: 1100px;
+  //   }
+  // }
 }
 .sort-buttons {
-  margin-top: 30px;
+  margin-top: 50px;
   .sort-btn {
     display: inline-block;
     padding: 3px 12px 7px;
     border: solid 2px $color-primary;
     background-color: $color-primary;
-    @include tran(0.5s);
+    transition: all 0.5s;
     margin: 5px 5px 5px 0;
     span {
       display: inline-block;
@@ -432,7 +460,7 @@
       font-size: $font-normal; //16px
       line-height: normal;
       text-align: center;
-      @include tran(0.5s);
+      transition: all 0.5s;
     }
   }
   .sort-name {
@@ -442,23 +470,23 @@
     color: $text-color-black;
     padding-left: 10px;
   }
-  @include media-breakpoint-up("md") {
-    margin-top: 30px;
+  @media (min-width: 768px) {
+    // margin-top: 30px;
     .sort-btn {
       span {
         font-size: $font-normal; //16px
       }
     }
   }
-  @include media-breakpoint-up("lg") {
+  @media (min-width: 992px) {
     .sort-btn {
       display: block;
       padding: 8px 24px;
       margin: 10px 0;
     }
   }
-  @include media-breakpoint-up("xl") {
-    margin-top: 30px;
+  @media (min-width: 1200px) {
+    margin-top: 43px;
     .sort-btn {
       span {
         font-size: $font-md; //20px
@@ -474,26 +502,203 @@
         .sort-name {
           color: #ffffff;
         }
+        &:hover {
+          background-color: #ffffff;
+          .sort-name {
+            color: $text-color-primary;
+          }
+        }
       }
     }
   }
 }
 
-.sort-table-wrap {
-  max-width: 100%;
-  width: 100%;
-  overflow-x: auto;
-  .table-head,
-  .table-body {
-    p,
-    span {
-      font-size: $font-normal; //16px
-      line-height: 1;
+//================== opening ===============
+.opening {
+  &-wrap {
+    max-width: 1700px;
+    width: 100%;
+    margin: 0 auto;
+    border-top: 1px solid #000;
+    padding: 24px 0;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: wrap;
+  }
+  &-name {
+    width: 100%;
+    font-size: 1.375rem; //22px
+    font-weight: bold;
+    line-height: normal;
+    color: $text-color-primary;
+    padding-bottom: 50px;
+  }
+  &-content {
+    width: 100%;
+    p {
+      font-size: $font-normal;
       color: $text-color-black;
+      font-weight: 300;
+      line-height: 1.7;
     }
-    .large-text {
-      font-size: $font-normal; //16px
+  }
+  @media (min-width: 768px) {
+    &-name {
+      max-width: 30%;
+      font-size: 1.5rem; //24px
     }
+    &-content {
+      max-width: 70%;
+    }
+  }
+  //手機版 橫式
+  @media (max-height: 420px) {
+    &-name {
+      max-width: 100%;
+      font-size: 1.375rem; //22px
+    }
+    &-content {
+      max-width: 100%;
+    }
+  }
+  @media (min-width: 992px) {
+    &-name {
+      max-width: 30%;
+      font-size: 1.5rem; //24px
+    }
+    &-content {
+      max-width: 70%;
+    }
+  }
+  @media (min-width: 1400px) {
+    &-name {
+      // max-width: calc(100% - 1200px);
+      font-size: 1.5rem; //24px
+    }
+    &-content {
+      // max-width: 1200px;
+      p {
+        font-size: $font-sm;
+      }
+    }
+  }
+}
+.opening-large-text {
+  font-weight: 500;
+  font-size: $font-normal;
+  color: $text-color-black;
+  line-height: 1.7;
+}
+.opening-lists {
+  list-style: simp-chinese-informal;
+  padding-left: 30px;
+
+  > li {
+    font-size: $font-normal;
+    font-weight: 300;
+    color: $text-color-black;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    &.opening-large-text {
+      font-weight: 500;
+    }
+  }
+  .open-sub-list {
+    li {
+      font-size: $font-normal;
+      font-weight: 300;
+      color: $text-color-black;
+      line-height: 1.7;
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      flex-wrap: nowrap;
+    }
+  }
+  @media (min-width: 1200px) {
+    padding-left: 30px;
+    > li {
+      font-size: $font-sm;
+      margin-bottom: 30px;
+    }
+    .open-sub-list {
+      li {
+        font-size: $font-sm;
+      }
+    }
+  }
+}
+.date-info {
+  margin-top: 50px;
+  p {
+    font-size: $font-normal;
+    color: #808080;
+    font-weight: 300;
+  }
+}
+//==== sort-table-wrap table 版 =====
+.table-hover {
+  tbody {
+    tr {
+      transition: all 0.5s;
+      p {
+        transition: all 0.5s;
+      }
+      &:hover {
+        background-color: $color-primary;
+        .large-text {
+          text-decoration: underline;
+        }
+        p {
+          color: #ffffff;
+        }
+        .more {
+          color: $text-color-black;
+        }
+      }
+    }
+  }
+}
+.sort-table-wrap {
+  .table {
+    width: 760px;
+    thead {
+      th {
+        border-top: none;
+        &.sort-up {
+          .arrow {
+            transform: rotate(-180deg);
+          }
+        }
+        span {
+          display: inline-block;
+          vertical-align: middle;
+          &:first-of-type {
+            width: calc(100% - 20px);
+          }
+        }
+        .arrow {
+          width: 15px;
+          transition: all 0.5s;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  p,
+  span {
+    font-size: $font-normal; //16px
+    font-weight: 300;
+    line-height: 1.71;
+    color: $text-color-black;
+  }
+  .large-text {
+    font-size: $font-normal; //16px
+    font-weight: 300;
+    line-height: normal;
   }
   .cell-1 {
     width: 180px;
@@ -503,6 +708,13 @@
   }
   .cell-3 {
     width: 240px;
+    p {
+      // display: -webkit-box;
+      // -webkit-line-clamp: 5;
+      // -webkit-box-orient: vertical;
+      // overflow: hidden;
+      // text-overflow: ellipsis;
+    }
   }
   .cell-4 {
     width: 100px;
@@ -510,12 +722,12 @@
   .cell-5 {
     width: 130px;
   }
-  @include media-breakpoint-up("md") {
-    .table-head,
-    .table-body {
-      .large-text {
-        font-size: $font-sm; //18px
-      }
+  @media (min-width: 768px) {
+    .table {
+      width: 760px;
+    }
+    .large-text {
+      font-size: $font-sm; //18px
     }
     .cell-1 {
       width: 180px;
@@ -524,26 +736,29 @@
       width: 110px;
     }
     .cell-3 {
-      width: 240px;
+      width: 230px;
     }
     .cell-4 {
-      width: 100px;
+      width: 120px;
     }
     .cell-5 {
-      width: 130px;
+      width: 120px;
     }
   }
-
-  @include media-breakpoint-up("xl") {
-    .table-head,
-    .table-body {
-      p,
-      span {
-        font-size: $font-md; //20px
-      }
-      .large-text {
-        font-size: 2rem; //32px
-      }
+  @media (max-height: 420px) {
+  }
+  @media (min-width: 992px) {
+  }
+  @media (min-width: 1200px) {
+    .table {
+      width: 1200px;
+    }
+    p,
+    span {
+      font-size: $font-md; //20px
+    }
+    .large-text {
+      font-size: 2rem; //32px
     }
     .cell-1 {
       width: 400px;
@@ -552,101 +767,227 @@
       width: 170px;
     }
     .cell-3 {
-      width: 340px;
+      width: 330px;
     }
     .cell-4 {
-      width: 130px;
+      width: 150px;
     }
     .cell-5 {
-      width: 160px;
+      width: 150px;
     }
   }
-}
-.table-head {
-  @include flex-style(start, stretch, nowrap);
-}
-.head-cell {
-  padding-right: 20px;
-  padding-bottom: 18px;
-  flex: 1 0 auto;
-  border-bottom: 1px solid $color-black;
-  &:last-of-type {
-    padding-right: 0;
+  @media (min-width: 1500px) {
   }
-  &.sort-up {
-    .arrow {
-      transform: rotate(180deg);
+}
+//================== art work table 版 ===============
+.art-work-table-wrap {
+  max-width: 100%;
+  width: 100%;
+  overflow-x: auto;
+  .table {
+    width: 708px;
+    thead {
+      th {
+        border-top: none;
+        &.sort-up {
+          .arrow {
+            transform: rotate(-180deg);
+          }
+        }
+        span {
+          display: inline-block;
+          vertical-align: middle;
+          &:first-of-type {
+            width: calc(100% - 20px);
+          }
+        }
+        .arrow {
+          width: 15px;
+          transition: all 0.5s;
+          img {
+            width: 100%;
+          }
+        }
+      }
     }
   }
-  @include flex-style(space-between, center, nowrap);
-  span {
-    display: inline-block;
-  }
-  .arrow {
-    width: 15px;
-    img {
-      width: 100%;
-    }
-  }
-  @include media-breakpoint-up("xl") {
-    padding-right: 30px;
-    padding-bottom: 18px;
-  }
-}
-.table-body {
-  @include flex-style(start, stretch, wrap);
-}
-.body-row {
-  display: block;
-  border-bottom: 1px solid #000;
-  @include flex-style(start, stretch, nowrap);
-  @include tran(0.5s);
-  .body-cell {
-    padding-top: 20px;
-    padding-bottom: 20px;
+  .figure-box {
     padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0;
     flex: 1 0 auto;
     p {
       line-height: 1.71;
       font-weight: 300;
-      @include tran(0.5s);
+      transition: all 0.5s;
+    }
+    figcaption {
+      transition: all 0.5s;
+      padding-left: 10px;
+      font-size: $font-normal; //16px
+      font-weight: 300;
+      line-height: 1.31;
+      color: $text-color-black;
+      max-width: calc(100% - 160px);
+      width: 100%;
+    }
+    .work-pic {
+      width: 160px;
+      img {
+        width: 100%;
+      }
     }
   }
-  @include media-breakpoint-up("xl") {
-    .body-cell {
+  p,
+  span {
+    font-size: $font-normal; //16px
+    color: $text-color-black;
+    line-height: 1.71;
+    font-weight: 300;
+    transition: all 0.5s;
+  }
+  .large-text {
+    font-size: $font-normal; //16px
+  }
+  .cell-1 {
+    display: flex;
+    width: 318px;
+  }
+  .cell-2 {
+    width: 110px;
+  }
+  .cell-3 {
+    width: 140px;
+    p {
+      // display: -webkit-box;
+      // -webkit-line-clamp: 5;
+      // -webkit-box-orient: vertical;
+      // overflow: hidden;
+      // text-overflow: ellipsis;
+    }
+  }
+  .cell-4 {
+    width: 140px;
+  }
+  @media (min-width: 768px) {
+    .table {
+      width: 708px;
+    }
+    .figure-box {
+      figcaption {
+        padding-left: 20px;
+        font-size: $font-sm; //18px
+      }
+      .work-pic {
+        width: 160px;
+      }
+    }
+    .large-text {
+      font-size: $font-sm; //18px
+    }
+    .cell-1 {
+      width: 318px;
+    }
+    .cell-2 {
+      width: 110px;
+    }
+    .cell-3 {
+      width: 140px;
+    }
+    .cell-4 {
+      width: 140px;
+    }
+  }
+  @media (max-height: 420px) {
+    .table {
+      width: 752px;
+    }
+    .cell-1 {
+      width: 328px;
+    }
+    .cell-2 {
+      width: 120px;
+    }
+    .cell-3 {
+      width: 152px;
+    }
+    .cell-4 {
+      width: 152px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .table {
+      width: 1200px;
+    }
+    .figure-box {
+      padding-right: 15px;
       padding-top: 25px;
       padding-bottom: 25px;
-      padding-right: 50px;
-    }
-    &:hover {
-      background-color: $color-primary;
-      p {
-        color: #ffffff;
+      figcaption {
+        padding-left: 26px;
+        font-size: $font-sm; //18px
+        max-width: calc(100% - 300px);
       }
-      .more {
-        color: $text-color-black;
+      .work-pic {
+        width: 300px;
+      }
+    }
+    p,
+    span {
+      font-size: $font-md; //20px
+    }
+    .large-text {
+      font-size: 2rem; //32px
+    }
+    .cell-1 {
+      width: 670px;
+    }
+    .cell-2 {
+      width: 130px;
+    }
+    .cell-3 {
+      width: 200px;
+    }
+    .cell-4 {
+      width: 200px;
+    }
+  }
+  @media (min-width: 1500px) {
+    .figure-box {
+      figcaption {
+        padding-left: 48px;
+        font-size: 2rem; //32px
+      }
+      .work-pic {
+        width: 300px;
       }
     }
   }
 }
-.more {
-  display: block;
-  font-size: $font-sm;
-  line-height: 1.71;
-  font-weight: 300;
-  color: $text-color-primary;
-  border: none;
-  background: transparent;
-  padding-left: 0;
-  @include tran(0.5s);
+//================== art exhibition ===============
+.full-wrap {
+  &.about-wrap {
+    padding-top: 20px;
+    .about-name {
+      max-width: 100%;
+      // margin-bottom: 20px;
+    }
+    .about-content {
+      max-width: 100%;
+    }
+  }
 }
-.search-data {
-  position: absolute;
-  top: -28px;
-  left: 0;
-  font-size: $font-normal;
-  line-height: normal;
-  color: #757575;
-}
+.ex-pic-box {
+  margin-bottom: 30px;
+  img {
+    width: 100%;
+  }
 
-//================== result ===============
+  @media (max-height: 420px) {
+    &.col-md-4 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+}

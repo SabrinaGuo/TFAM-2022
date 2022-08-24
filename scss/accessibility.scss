@@ -1,0 +1,39 @@
+@import "_variable";
+a {
+  &:focus {
+    outline: 2px dotted #000;
+  }
+}
+//導盲磚設定
+.acc {
+  color: $text-color-black;
+  font-size: 0.775rem;
+  display: none;
+  height: 16px;
+  @media (min-width: 1200px) {
+    display: inline-block;
+    &:hover {
+      color: $text-color-black;
+    }
+  }
+}
+.main-content {
+  &.main-idx {
+    .acc {
+      top: -28px;
+    }
+  }
+  .acc {
+    position: absolute;
+    top: -90px;
+    left: 30px;
+  }
+}
+footer {
+  .acc {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 1;
+  }
+}

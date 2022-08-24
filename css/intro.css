@@ -1,9 +1,3 @@
-@charset "UTF-8";
-/* flex */
-/* size */
-/* 置中 */
-/* 動畫效果 */
-/* text */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap");
 /* font */
 /* radius */
@@ -17,32 +11,54 @@
 }
 
 .header-intro .header-top {
-  top: 30px;
+  top: 41px;
 }
 
 .header-intro .header-title {
-  width: 100%;
+  position: absolute;
   left: 50%;
-  top: 36%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  top: 180px;
+  -webkit-transform: translate(-50%, 0%);
+      -ms-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  width: 100%;
+  text-align: center;
+}
+
+.header-intro .header-title .logo {
+  max-width: 270px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header-intro .header-title .logo img {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .header-intro .header-top {
+    top: 50px;
+  }
+  .header-intro .header-title {
+    top: 250px;
+  }
+  .header-intro .header-title .logo {
+    max-width: 450px;
+  }
 }
 
 @media (max-height: 420px) {
   .header-intro {
     height: 540px;
+  }
+  .header-intro .header-top {
+    top: 41px;
+  }
+  .header-intro .header-title {
+    top: 120px;
+  }
+  .header-intro .header-title .logo {
+    max-width: 330px;
   }
 }
 
@@ -51,9 +67,10 @@
     top: 50px;
   }
   .header-intro .header-title {
-    width: 100%;
-    left: 50%;
-    top: 36%;
+    top: 180px;
+  }
+  .header-intro .header-title .logo {
+    max-width: 400px;
   }
 }
 
@@ -65,9 +82,10 @@
     top: 30px;
   }
   .header-intro .header-title {
-    width: 100%;
-    left: 50%;
-    top: 36%;
+    top: 25.9vh;
+  }
+  .header-intro .header-title .logo {
+    max-width: 488px;
   }
 }
 

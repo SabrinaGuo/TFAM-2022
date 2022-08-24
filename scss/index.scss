@@ -1,12 +1,110 @@
-@import "_mixin";
 @import "_variable";
 //===== 以上共用 =====
 
+.header-idx {
+  position: relative;
+  background: #d8d8d8 url("../images/kv-inner-banner-m@2x.png") right bottom
+    no-repeat;
+  padding-bottom: 282px;
+  background-size: cover;
+
+  @media (min-width: 768px) {
+    background: #d8d8d8 url("../images/kv-page-banner@2x.png") center top
+      no-repeat;
+    padding-bottom: 42%;
+    background-size: cover;
+  }
+  @media (max-height: 420px) {
+    background: #d8d8d8 url("../images/kv-inner-banner-m-l@2x.png") center -26px
+      no-repeat;
+    padding-bottom: 216px;
+    background-size: cover;
+  }
+  @media (min-width: 1200px) {
+    // padding-bottom: 57.4%;
+    padding-bottom: 770px;
+  }
+}
+.header-title-idx {
+  position: absolute;
+  // top: 208px;
+  top: 215px;
+  left: 30px;
+  .logo {
+    max-width: 257px;
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  @media (min-width: 768px) {
+    top: 190px;
+    left: 55px;
+    .logo {
+      max-width: 278px;
+    }
+  }
+  @media (max-height: 420px) {
+    left: 55px;
+    top: 150px;
+    .logo {
+      max-width: 257px;
+    }
+  }
+  @media (min-width: 992px) {
+    // top: 380px;
+    top: 160px;
+    .logo {
+      max-width: 372px;
+    }
+  }
+  @media (min-width: 1200px) {
+    top: 500px;
+    // top: 40%;
+    .logo {
+      max-width: 630px;
+    }
+  }
+}
+.logo-box-idx {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: nowrap;
+  .logo {
+    max-width: 27px;
+    width: 100%;
+    display: inline-block;
+
+    img {
+      width: 100%;
+    }
+  }
+  @media (min-width: 768px) {
+    .logo {
+      max-width: 28px;
+    }
+  }
+  @media (min-width: 992px) {
+    .logo {
+      max-width: 32px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .logo {
+      max-width: 52px;
+      margin-left: 10px;
+    }
+  }
+}
 .exhibition-list {
   max-width: 1700px;
   width: 100%;
   margin: 0 auto;
-  @include flex-style(start, stretch, wrap);
+  display: flex;
+  justify-content: start;
+  align-items: stretch;
+  flex-wrap: wrap;
   li {
     max-width: 100%;
     width: 100%;
@@ -17,9 +115,14 @@
         width: 100%;
       }
     }
+    .pic-intro-link {
+    }
     .date {
       padding: 20px 0;
-      @include flex-style(space-between, center, nowrap);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
       p {
         font-size: 1.75rem; //28px
         font-weight: bold;
@@ -28,6 +131,7 @@
         color: $text-color-primary;
         max-width: calc(100% - 35px);
         width: 100%;
+        transition: all 0.5s;
       }
       .arrow-icon {
         width: 35px;
@@ -58,13 +162,12 @@
           display: block;
           padding: 14px 0;
           color: inherit;
-          @include tran(0.5s);
+          transition: all 0.5s;
         }
       }
     }
   }
-
-  @include media-breakpoint-up("md") {
+  @media (min-width: 768px) {
     li {
       max-width: calc((100% - 150px) / 3);
       margin: 0 25px 100px;
@@ -100,7 +203,7 @@
       }
     }
   }
-  @include media-breakpoint-up("lg") {
+  @media (min-width: 992px) {
     li {
       max-width: calc((100% - 200px) / 4);
       .date {
@@ -117,8 +220,17 @@
       }
     }
   }
-  @include media-breakpoint-up("xl") {
+  @media (min-width: 1200px) {
     li {
+      .pic-intro-link {
+        &:hover {
+          .date {
+            p {
+              color: #919191;
+            }
+          }
+        }
+      }
       .date {
         padding: 24px 0;
         p {

@@ -15,7 +15,7 @@ $font-xxxl: 5.625rem; //90px
 $font-xxl: 3.75rem; //60px
 $font-xl: 2.8125rem; //45px
 $font-lg: 2.25rem; //36px
-$font-md: 1.25rem; //20px
+$font-md: 1.3125rem; //20px
 $font-sm: 1.125rem; //18px
 $font-normal: 1rem; //16px
 
@@ -38,60 +38,3 @@ $width-lg: 992px;
 $width-xl: 1200px; //pc
 $width-xxl: 1400px;
 $width-xxxl: 1500px;
-
-$breakpoints: (
-  "xs": $width-xs,
-  "sm": $width-sm,
-  "md": $width-md,
-  "lg": $width-lg,
-  "xl": $width-xl,
-  "xxl": $width-xxl,
-  "xxxl": $width-xxxl,
-);
-
-@mixin media-breakpoint-down($width) {
-  @if map_has_key($breakpoints, $width) {
-    $width: map_get($breakpoints, $width) - 0.02;
-    @media (max-width: $width) {
-      @content;
-    }
-  } @else {
-    @error "breakpoint `#{$width}` not found in `#{$breakpoints}`";
-  }
-}
-@mixin media-breakpoint-up($width) {
-  @if map_has_key($breakpoints, $width) {
-    $width: map_get($breakpoints, $width);
-    $current: ceil($width);
-    @media (min-width: $current) {
-      @content;
-    }
-  } @else {
-    @error "breakpoint `#{$width}` not found in `#{$breakpoints}`";
-  }
-}
-@mixin media-breakpoint-only($width) {
-  @if map_has_key($breakpoints, $width) {
-    $breakpoint-names: map-keys($breakpoints);
-    $n: index($breakpoint-names, $width);
-    $current: map_get($breakpoints, $width);
-    $next: null;
-    @if $n == length($breakpoints) {
-      $next: null;
-    } @else {
-      $next: map_get($breakpoints, nth($breakpoint-names, $n + 1)) - 0.02;
-    }
-
-    @if $next {
-      @media (min-width: $current) and (max-width: $next) {
-        @content;
-      }
-    } @else {
-      @media (min-width: $current) {
-        @content;
-      }
-    }
-  } @else {
-    @error "breakpoint `#{$width}` not found in `#{$breakpoints}`";
-  }
-}

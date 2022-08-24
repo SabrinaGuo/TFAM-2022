@@ -1,4 +1,3 @@
-@import "_mixin";
 @import "_variable";
 //===== 以上共用 =====
 .header-intro {
@@ -10,42 +9,77 @@
   //   height: calc(100vh - 164px);
   //   padding-bottom: 49.4%;
   .header-top {
-    top: 30px;
+    top: 41px;
   }
   .header-title {
-    width: 100%;
+    position: absolute;
     left: 50%;
-    top: 36%;
-    transform: translate(-50%, -50%);
-    @include flex-style(center, start, wrap);
+    top: 180px;
+    transform: translate(-50%, 0%);
+    width: 100%;
+    text-align: center;
+    .logo {
+      max-width: 270px;
+      width: 100%;
+      margin: 0 auto;
+      img {
+        width: 100%;
+      }
+    }
   }
-  @media (max-height: 420px) {
-    height: 540px;
-  }
-  @include media-breakpoint-up("lg") {
+
+  @media (min-width: 768px) {
     .header-top {
       top: 50px;
     }
     .header-title {
-      width: 100%;
-      left: 50%;
-      top: 36%;
+      top: 250px;
+      .logo {
+        max-width: 450px;
+      }
     }
   }
-  @include media-breakpoint-up("xl") {
+  @media (max-height: 420px) {
+    height: 540px;
+    .header-top {
+      top: 41px;
+    }
+    .header-title {
+      top: 120px;
+      .logo {
+        max-width: 330px;
+      }
+    }
+  }
+  @media (min-width: 992px) {
+    .header-top {
+      top: 50px;
+    }
+    .header-title {
+      top: 180px;
+      .logo {
+        max-width: 400px;
+      }
+    }
+  }
+  @media (min-width: 1200px) {
     height: 100vh;
     .header-top {
       top: 30px;
     }
     .header-title {
-      width: 100%;
-      left: 50%;
-      top: 36%;
+      top: 25.9vh;
+      .logo {
+        max-width: 488px;
+      }
     }
   }
 }
 .lang-box {
-  @include flex-style(center, center, nowrap);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
   width: 100%;
   padding-top: 56px;
   a {
@@ -56,7 +90,7 @@
       border-left: 1px solid #000;
     }
   }
-  @include media-breakpoint-up("xl") {
+  @media (min-width: 1200px) {
     a {
       &:hover {
         color: $text-color-primary;
