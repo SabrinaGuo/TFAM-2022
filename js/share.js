@@ -1,5 +1,6 @@
 let meunOpen = false; //選單開啟與否
 let searchBarOpen = false; //search開啟與否
+let sortHead = $(".sort-table-wrap thead th"); //表格篩選圖示
 
 //開啟收合的選單
 $(".meun-btn").on("click", function () {
@@ -39,8 +40,8 @@ $("body").on("mouseup, touchend", function (e) {
   }
   return;
 });
+
 //表格篩選圖示 toggle 切換
-let sortHead = $(".sort-table-wrap thead th");
 sortHead.on("click", function () {
   $(this).toggleClass("sort-up");
 });
@@ -171,8 +172,6 @@ function countTextNumber() {
     }
   });
 }
-countTextNumber();
-
 //連結數量計算
 function countLinkRows() {
   let linkRows = $(".countRows .ex-link");
@@ -187,7 +186,6 @@ function countLinkRows() {
     });
   }
 }
-countLinkRows();
 //加入按鈕 link more
 function addMoreBtnForLinkRows(target) {
   if (target.data("hadmore") == false) {
@@ -214,6 +212,9 @@ function moreStatusForLinkRows(target) {
     target.data("seemore", false);
   }
 }
+
+countTextNumber();
+countLinkRows();
 // 瀏覽器 resize 時呼叫
 $(window).on("resize", function () {
   countTextNumber();
