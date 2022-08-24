@@ -406,6 +406,9 @@ a:hover {
     width: 25px;
     height: 25px;
   }
+  .search-box.onFocus {
+    width: 250px;
+  }
   .search-box:hover, .search-box:valid {
     width: 250px;
     border-radius: 25px;

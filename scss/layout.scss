@@ -227,6 +227,9 @@ a {
       width: 25px;
       height: 25px;
     }
+    &.onFocus {
+      width: 250px;
+    }
     &:hover,
     &:valid {
       width: 250px;

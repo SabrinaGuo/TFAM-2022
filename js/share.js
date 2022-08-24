@@ -12,6 +12,31 @@ $(".meun-btn").on("click", function () {
     $("body,html").addClass("active");
   }
 });
+//桌機版時 當搜尋 input focus時 搜尋bar維持打開狀態
+$(".search-box").on("mouseenter", function (e) {
+  if ($("body").width() > 1200) {
+    $(this).on("click", function (e) {
+      if (e.target.matches("input")) {
+        $(this).addClass("onFocus");
+      }
+    });
+  }
+});
+//桌機版時 當點擊非搜尋區域時 搜尋bar便會關閉
+$("body").on("click", function (e) {
+  if ($("body").width() > 1200) {
+    if (
+      e.target.matches(".search-icon") ||
+      e.target.matches(".search-input") ||
+      e.target.matches(".search-box")
+    ) {
+      $(".search-box").addClass("onFocus");
+    } else {
+      $(".search-box").removeClass("onFocus");
+    }
+  }
+});
+
 //寬度小於 1200 時的search input
 $(".search-box").on("click", function (e) {
   if ($("body").width() < 1200) {
@@ -28,7 +53,7 @@ $(".search-box").on("click", function (e) {
 
 //關閉 search input
 //寬度小於 1200 時 不是點擊search input or search icon 就會關閉 search input
-$("body").on("mouseup, touchend", function (e) {
+$("body").on("mouseup touchend", function (e) {
   if ($("body").width() < 1200) {
     if (
       !e.target.matches(".search-icon") ||
