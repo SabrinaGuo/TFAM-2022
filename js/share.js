@@ -65,6 +65,9 @@ $("body").on("mouseup touchend", function (e) {
   }
   return;
 });
+$(".btn-guide").on("click", function () {
+  $(this).parents("li").toggleClass("on");
+});
 
 //表格篩選圖示 toggle 切換
 sortHead.on("click", function () {
@@ -125,75 +128,40 @@ function moreStatus(target) {
     target.data("seemore", false);
   }
 }
-//字數計算
+//more 內容高度計算
 function countTextNumber() {
   $(".countText p").each(function () {
     let parents = $(this).parents(".countText");
-    if (parents.hasClass("content-article")) {
-      console.log($(this).text());
-      switch (checkScreenWidth()) {
-        case "desk":
-          if ($(this).height() > 762) {
-            parents.addClass("ellipsis");
-            addMoreBtn(parents);
-          }
-          break;
-        case "padPortrait":
-          if ($(this).height() > 762) {
-            parents.addClass("ellipsis");
-            addMoreBtn(parents);
-          }
-          break;
-        case "padLandscape":
-          if ($(this).height() > 576) {
-            parents.addClass("ellipsis");
-            addMoreBtn(parents);
-          }
-          break;
-        case "phone":
-          if ($(this).height() > 700) {
-            parents.addClass("ellipsis");
-            addMoreBtn(parents);
-          }
-          break;
-        default:
-          if ($(this).height() > 762) {
-            parents.addClass("ellipsis");
-            addMoreBtn(parents);
-          }
-      }
-    } else {
-      switch (checkScreenWidth()) {
-        case "desk":
-          if ($(this).height() > 179.55) {
-            parents.addClass("ellipsis");
-            addMoreBtn(parents);
-          }
-          break;
-        case "padPortrait":
-          if ($(this).height() > 136) {
-            parents.addClass("ellipsis");
-            addMoreBtn(parents);
-          }
-          break;
-        case "padLandscape":
-          if ($(this).height() > 136) {
-            parents.addClass("ellipsis");
-            addMoreBtn(parents);
-          }
-          break;
-        case "phone":
-          if ($(this).height() > 136) {
-            parents.addClass("ellipsis");
-            addMoreBtn(parents);
-          }
-          break;
-        default:
-          if ($(this).height() > 179) {
-            parents.addClass("ellipsis");
-            addMoreBtn(parents);
-          }
-      }
+    switch (checkScreenWidth()) {
+      case "desk":
+        if ($(this).height() > 179.55) {
+          parents.addClass("ellipsis");
+          addMoreBtn(parents);
+        }
+        break;
+      case "padPortrait":
+        if ($(this).height() > 136) {
+          parents.addClass("ellipsis");
+          addMoreBtn(parents);
+        }
+        break;
+      case "padLandscape":
+        if ($(this).height() > 136) {
+          parents.addClass("ellipsis");
+          addMoreBtn(parents);
+        }
+        break;
+      case "phone":
+        if ($(this).height() > 136) {
+          parents.addClass("ellipsis");
+          addMoreBtn(parents);
+        }
+        break;
+      default:
+        if ($(this).height() > 179) {
+          parents.addClass("ellipsis");
+          addMoreBtn(parents);
+        }
     }
   });
 }

@@ -57,44 +57,38 @@ a {
     text-overflow: ellipsis;
   }
 }
-.content-article {
-  &.ellipsis {
-    p {
-      -webkit-line-clamp: 25;
-    }
-  }
-}
 //===== 以上共用 =====
 
 .header {
   position: relative;
-  background: #d8d8d8 url("../images/kv-inner-banner-m@2x.png") right bottom
+  background: #ffffff url("../images/kv-inner-banner-m@2x.png") right bottom
     no-repeat;
   padding-bottom: 282px;
-  background-size: cover;
+  background-size: 100% 100%;
 
   @media (min-width: 768px) {
-    background: #d8d8d8 url("../images/kv-inner-banner@2x.png") right top
+    background: #ffffff url("../images/kv-inner-banner-pad@2x.png") right top
       no-repeat;
     padding-bottom: 262px;
     // padding-bottom: 28.18%;
-    background-size: cover;
+    background-size: 100% 100%;
   }
   @media (max-height: 420px) {
-    background: #d8d8d8 url("../images/kv-inner-banner-m-l@2x.png") center -26px
+    background: #ffffff url("../images/kv-inner-banner-m-l@2x.png") center top
       no-repeat;
     padding-bottom: 216px;
-    background-size: cover;
+    background-size: 100% 100%;
   }
   @media (min-width: 992px) {
-    background: #d8d8d8 url("../images/kv-inner-banner@2x.png") right top
+    background: #ffffff url("../images/kv-inner-banner-pad-p@2x.png") right top
       no-repeat;
     padding-bottom: 352px;
-    background-size: cover;
+    background-size: 100% 100%;
   }
   @media (min-width: 1200px) {
     // padding-bottom: 28.18%;
-    padding-bottom: 534px;
+    padding-bottom: 522px;
+    background-size: 100% 100%;
   }
 }
 .header-top {
@@ -114,7 +108,7 @@ a {
     top: 41px;
   }
   @media (min-width: 992px) {
-    top: 50px;
+    top: 40px;
   }
   @media (min-width: 1200px) {
     top: 80px;
@@ -154,16 +148,16 @@ a {
 .search-guide {
   position: absolute;
   right: 75px;
-  top: -17px;
+  top: -10px;
   display: flex;
   justify-content: start;
   align-items: center;
   flex-wrap: nowrap;
   @media (min-width: 768px) {
-    top: -26px;
+    // top: -10px;
   }
   @media (max-height: 420px) {
-    top: -17px;
+    // top: -17px;
   }
   @media (min-width: 992px) {
     position: static;
@@ -267,7 +261,7 @@ a {
 }
 .meun-btn {
   position: absolute;
-  top: 23px;
+  top: 30px;
   right: 30px;
   z-index: 10;
   display: inline-block;
@@ -282,6 +276,12 @@ a {
     margin: 9px 0;
     transition: all 0.5s;
   }
+  @media (min-width: 768px) {
+    top: 40px;
+  }
+  @media (max-height: 420px) {
+    top: 32px;
+  }
   @media (min-width: 992px) {
     display: none;
   }
@@ -290,7 +290,13 @@ a {
   position: absolute;
   // top: 208px;
   top: 215px;
-  left: 30px;
+  // left: 30px;
+  max-width: 1760px;
+  width: 100%;
+  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 30px;
   .logo {
     max-width: 257px;
     width: 100%;
@@ -300,30 +306,30 @@ a {
   }
   @media (min-width: 768px) {
     top: 190px;
-    left: 55px;
+    // left: 55px;
     .logo {
       max-width: 278px;
     }
   }
   @media (max-height: 420px) {
-    left: 55px;
+    // left: 55px;
     top: 150px;
     .logo {
       max-width: 257px;
     }
   }
   @media (min-width: 992px) {
-    // top: 380px;
     top: 160px;
+    // top: 380px;
     .logo {
-      max-width: 372px;
+      max-width: 265px;
     }
   }
   @media (min-width: 1200px) {
     top: 300px;
     // top: 40%;
     .logo {
-      max-width: 630px;
+      max-width: 497px;
     }
   }
 }
@@ -405,10 +411,16 @@ nav {
       a {
         color: $text-color-primary;
       }
+      .btn-guide {
+        background-color: #000000;
+        color: #ffffff;
+      }
     }
   }
   .btn-guide {
     display: inline-block;
+    font-size: 1rem;
+    padding: 2px 12px;
   }
   @media (min-width: 992px) {
     height: auto;
@@ -1201,20 +1213,15 @@ footer {
   max-width: 46px;
   width: 100%;
   display: block;
-  margin-top: 25px;
-  margin-bottom: -25px;
+  margin-top: 50px;
   img {
     width: 100%;
   }
-  @media (min-width: 768px) {
-    &.dis-md-up {
-      display: none;
-    }
-  }
-  @media (min-width: 1200px) {
-    margin-bottom: -50px;
+  @media (min-width: 992px) {
+    margin-top: 100px;
   }
 }
+
 //================== lightbox ===============
 .modal-backdrop {
   &.show {

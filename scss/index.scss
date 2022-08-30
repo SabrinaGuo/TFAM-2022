@@ -3,33 +3,47 @@
 
 .header-idx {
   position: relative;
-  background: #d8d8d8 url("../images/kv-inner-banner-m@2x.png") right bottom
+  background: #ffffff url("../images/kv-inner-banner-m@2x.png") right bottom
     no-repeat;
   padding-bottom: 282px;
   background-size: cover;
 
   @media (min-width: 768px) {
-    background: #d8d8d8 url("../images/kv-page-banner@2x.png") center top
+    background: #ffffff url("../images/kv-page-banner-pad@2x.png") center top
       no-repeat;
-    padding-bottom: 42%;
+    padding-bottom: 412px;
     background-size: cover;
   }
   @media (max-height: 420px) {
-    background: #d8d8d8 url("../images/kv-inner-banner-m-l@2x.png") center -26px
+    background: #ffffff url("../images/kv-page-banner-m-l@2x.png") center top
       no-repeat;
-    padding-bottom: 216px;
+    padding-bottom: 330px;
+    background-size: 100% 100%;
+  }
+  @media (min-width: 992px) {
+    background: #ffffff url("../images/kv-page-banner-pad-p@2x.png") center top
+      no-repeat;
     background-size: cover;
+    padding-bottom: 538px;
   }
   @media (min-width: 1200px) {
-    // padding-bottom: 57.4%;
-    padding-bottom: 770px;
+    background: #ffffff url("../images/kv-page-banner@2x.png") center top
+      no-repeat;
+    background-size: cover;
+    padding-bottom: 999px;
   }
 }
 .header-title-idx {
   position: absolute;
   // top: 208px;
   top: 215px;
-  left: 30px;
+  // left: 30px;
+  max-width: 1760px;
+  width: 100%;
+  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 30px;
   .logo {
     max-width: 257px;
     width: 100%;
@@ -38,28 +52,28 @@
     }
   }
   @media (min-width: 768px) {
-    top: 190px;
-    left: 55px;
+    top: 340px;
+    // left: 55px;
     .logo {
       max-width: 278px;
     }
   }
   @media (max-height: 420px) {
-    left: 55px;
-    top: 150px;
+    top: 264px;
+    // left: 55px;
     .logo {
       max-width: 257px;
     }
   }
   @media (min-width: 992px) {
+    top: 380px;
     // top: 380px;
-    top: 160px;
     .logo {
       max-width: 372px;
     }
   }
   @media (min-width: 1200px) {
-    top: 500px;
+    top: 717px;
     // top: 40%;
     .logo {
       max-width: 630px;
@@ -98,7 +112,7 @@
   }
 }
 .exhibition-list {
-  max-width: 1700px;
+  max-width: 1699px;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -114,8 +128,6 @@
       img {
         width: 100%;
       }
-    }
-    .pic-intro-link {
     }
     .date {
       padding: 20px 0;
@@ -169,8 +181,14 @@
   }
   @media (min-width: 768px) {
     li {
-      max-width: calc((100% - 150px) / 3);
-      margin: 0 25px 100px;
+      max-width: calc((100% - 200px) / 3);
+      margin: 0 50px 100px;
+      &:nth-of-type(3n + 1) {
+        margin: 0 50px 100px 0;
+      }
+      &:nth-of-type(3n) {
+        margin: 0 0 100px 50px;
+      }
       .date {
         padding: 20px 0;
         p {
@@ -188,7 +206,17 @@
   @media (max-height: 420px) {
     li {
       max-width: calc((100% - 100px) / 2);
-      margin: 0 25px 50px;
+      margin: 0 50px 100px 0;
+      &:nth-of-type(3n + 1) {
+        margin: 0 50px 100px 0;
+      }
+      &:nth-of-type(3n) {
+        margin: 0 50px 100px 0;
+      }
+      &:nth-of-type(2n) {
+        margin: 0 0 100px 50px;
+      }
+
       .date {
         padding: 20px 0;
         p {
@@ -205,7 +233,23 @@
   }
   @media (min-width: 992px) {
     li {
-      max-width: calc((100% - 200px) / 4);
+      max-width: calc((100% - 300px) / 4);
+      margin: 0 50px 100px;
+      &:nth-of-type(2n) {
+        margin: 0 50px 100px;
+      }
+      &:nth-of-type(3n + 1) {
+        margin: 0 50px 100px;
+      }
+      &:nth-of-type(3n) {
+        margin: 0 50px 100px;
+      }
+      &:nth-of-type(4n + 1) {
+        margin: 0 50px 100px 0;
+      }
+      &:nth-of-type(4n) {
+        margin: 0 0 100px 50px;
+      }
       .date {
         padding: 20px 0;
         p {

@@ -23,14 +23,14 @@ a:focus {
   }
 }
 
-.main-content.main-idx .acc {
-  top: -28px;
-}
-
 .main-content .acc {
   position: absolute;
-  top: -90px;
+  top: -33px;
   left: 30px;
+}
+
+.main-content.main-idx .acc {
+  top: -28px;
 }
 
 footer .acc {

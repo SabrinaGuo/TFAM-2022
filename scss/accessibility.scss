@@ -18,15 +18,15 @@ a {
   }
 }
 .main-content {
+  .acc {
+    position: absolute;
+    top: -33px;
+    left: 30px;
+  }
   &.main-idx {
     .acc {
       top: -28px;
     }
-  }
-  .acc {
-    position: absolute;
-    top: -90px;
-    left: 30px;
   }
 }
 footer {

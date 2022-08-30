@@ -90,14 +90,14 @@ a:focus {
   }
 }
 
-.main-content.main-idx .acc {
-  top: -28px;
-}
-
 .main-content .acc {
   position: absolute;
-  top: -90px;
+  top: -33px;
   left: 30px;
+}
+
+.main-content.main-idx .acc {
+  top: -28px;
 }
 
 footer .acc {
@@ -169,44 +169,41 @@ a:hover {
      text-overflow: ellipsis;
 }
 
-.content-article.ellipsis p {
-  -webkit-line-clamp: 25;
-}
-
 .header {
   position: relative;
-  background: #d8d8d8 url("../images/kv-inner-banner-m@2x.png") right bottom no-repeat;
+  background: #ffffff url("../images/kv-inner-banner-m@2x.png") right bottom no-repeat;
   padding-bottom: 282px;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 @media (min-width: 768px) {
   .header {
-    background: #d8d8d8 url("../images/kv-inner-banner@2x.png") right top no-repeat;
+    background: #ffffff url("../images/kv-inner-banner-pad@2x.png") right top no-repeat;
     padding-bottom: 262px;
-    background-size: cover;
+    background-size: 100% 100%;
   }
 }
 
 @media (max-height: 420px) {
   .header {
-    background: #d8d8d8 url("../images/kv-inner-banner-m-l@2x.png") center -26px no-repeat;
+    background: #ffffff url("../images/kv-inner-banner-m-l@2x.png") center top no-repeat;
     padding-bottom: 216px;
-    background-size: cover;
+    background-size: 100% 100%;
   }
 }
 
 @media (min-width: 992px) {
   .header {
-    background: #d8d8d8 url("../images/kv-inner-banner@2x.png") right top no-repeat;
+    background: #ffffff url("../images/kv-inner-banner-pad-p@2x.png") right top no-repeat;
     padding-bottom: 352px;
-    background-size: cover;
+    background-size: 100% 100%;
   }
 }
 
 @media (min-width: 1200px) {
   .header {
-    padding-bottom: 534px;
+    padding-bottom: 522px;
+    background-size: 100% 100%;
   }
 }
 
@@ -243,7 +240,7 @@ a:hover {
 
 @media (min-width: 992px) {
   .header-top {
-    top: 50px;
+    top: 40px;
   }
 }
 
@@ -299,7 +296,7 @@ a:hover {
 .search-guide {
   position: absolute;
   right: 75px;
-  top: -17px;
+  top: -10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -311,18 +308,6 @@ a:hover {
           align-items: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-}
-
-@media (min-width: 768px) {
-  .search-guide {
-    top: -26px;
-  }
-}
-
-@media (max-height: 420px) {
-  .search-guide {
-    top: -17px;
-  }
 }
 
 @media (min-width: 992px) {
@@ -454,7 +439,7 @@ a:hover {
 
 .meun-btn {
   position: absolute;
-  top: 23px;
+  top: 30px;
   right: 30px;
   z-index: 10;
   display: inline-block;
@@ -474,6 +459,18 @@ a:hover {
   transition: all 0.5s;
 }
 
+@media (min-width: 768px) {
+  .meun-btn {
+    top: 40px;
+  }
+}
+
+@media (max-height: 420px) {
+  .meun-btn {
+    top: 32px;
+  }
+}
+
 @media (min-width: 992px) {
   .meun-btn {
     display: none;
@@ -483,7 +480,14 @@ a:hover {
 .header-title {
   position: absolute;
   top: 215px;
-  left: 30px;
+  max-width: 1760px;
+  width: 100%;
+  margin: 0 auto;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 0 30px;
 }
 
 .header-title .logo {
@@ -498,7 +502,6 @@ a:hover {
 @media (min-width: 768px) {
   .header-title {
     top: 190px;
-    left: 55px;
   }
   .header-title .logo {
     max-width: 278px;
@@ -507,7 +510,6 @@ a:hover {
 
 @media (max-height: 420px) {
   .header-title {
-    left: 55px;
     top: 150px;
   }
   .header-title .logo {
@@ -520,7 +522,7 @@ a:hover {
     top: 160px;
   }
   .header-title .logo {
-    max-width: 372px;
+    max-width: 265px;
   }
 }
 
@@ -529,7 +531,7 @@ a:hover {
     top: 300px;
   }
   .header-title .logo {
-    max-width: 630px;
+    max-width: 497px;
   }
 }
 
@@ -638,8 +640,15 @@ nav {
   color: #5263ff;
 }
 
+.meun-list li.on .btn-guide {
+  background-color: #000000;
+  color: #ffffff;
+}
+
 .meun-list .btn-guide {
   display: inline-block;
+  font-size: 1rem;
+  padding: 2px 12px;
 }
 
 @media (min-width: 992px) {
@@ -1452,23 +1461,16 @@ footer.footer-intro {
   max-width: 46px;
   width: 100%;
   display: block;
-  margin-top: 25px;
-  margin-bottom: -25px;
+  margin-top: 50px;
 }
 
 .pdf-button img {
   width: 100%;
 }
 
-@media (min-width: 768px) {
-  .pdf-button.dis-md-up {
-    display: none;
-  }
-}
-
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .pdf-button {
-    margin-bottom: -50px;
+    margin-top: 100px;
   }
 }
 
