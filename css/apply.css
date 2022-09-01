@@ -86,6 +86,14 @@
   padding-bottom: 45px;
 }
 
+.apply-content .text-subtitle {
+  font-size: 1.5rem;
+  font-weight: normal;
+  line-height: normal;
+  color: #757575;
+  margin-bottom: 28px;
+}
+
 .apply-pic {
   max-width: 100%;
   width: 100%;
@@ -198,6 +206,13 @@
   .apply-pic {
     margin-top: 50px;
     margin-bottom: 45px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .apply-content .text-subtitle {
+    font-size: 1.625rem;
+    margin-bottom: 25px;
   }
 }
 
