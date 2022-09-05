@@ -1,6 +1,6 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -417,6 +417,11 @@ a:hover {
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
+}
+
+.btn-guide:active, .btn-guide.on {
+  background-color: #000000;
+  color: #ffffff;
 }
 
 @media (min-width: 992px) {
@@ -891,7 +896,8 @@ footer.footer-intro {
 }
 
 .pages-navgation {
-  margin-top: 35px;
+  margin-top: 34px;
+  margin-bottom: 45px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -949,7 +955,7 @@ footer.footer-intro {
 }
 
 .pages-navgation ul li a {
-  color: #5263ff;
+  color: #000000;
   width: 40px;
   text-align: center;
   padding: 15px 0;
@@ -1068,8 +1074,17 @@ footer.footer-intro {
   transition: all 0.5s;
 }
 
-.double-lists .list-name {
-  margin-right: 10px;
+.double-lists li a:active {
+  background-color: #ffffff;
+}
+
+.double-lists li a:active span {
+  color: #5263ff;
+}
+
+.double-lists li a:active .list-arrow figure {
+  background: url("./../images/arrow-dropdown-hover.png") center no-repeat;
+  background-size: contain;
 }
 
 .double-lists .list-arrow {
@@ -1087,6 +1102,7 @@ footer.footer-intro {
 
 .double-lists .sub-lists {
   position: absolute;
+  padding: 5px 0;
   z-index: -1;
   -webkit-transform: translateY(-5%);
       -ms-transform: translateY(-5%);
@@ -1100,6 +1116,19 @@ footer.footer-intro {
 
 .double-lists .sub-lists li {
   display: block;
+}
+
+.double-lists .sub-lists li.active > a {
+  background-color: #5263ff;
+}
+
+.double-lists .sub-lists li.active > a span {
+  color: #ffffff;
+}
+
+.double-lists .sub-lists li.active > a .list-arrow figure {
+  background: url("./../images/arrow-dropdown-hover.png") center no-repeat;
+  background-size: contain;
 }
 
 .double-lists .sub-lists a {
@@ -1122,6 +1151,19 @@ footer.footer-intro {
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
+}
+
+.double-lists .sub-lists a:active {
+  background-color: #5263ff;
+}
+
+.double-lists .sub-lists a:active span {
+  color: #ffffff;
+}
+
+.double-lists .sub-lists a:active .list-arrow figure {
+  background: url("./../images/arrow-dropdown.png") center no-repeat;
+  background-size: contain;
 }
 
 @media (min-width: 992px) {
@@ -1238,6 +1280,19 @@ footer.footer-intro {
   transition: all 0.5s;
 }
 
+.triple-lists li a:active {
+  background-color: #ffffff;
+}
+
+.triple-lists li a:active span {
+  color: #5263ff;
+}
+
+.triple-lists li a:active .list-arrow figure {
+  background: url("./../images/arrow-dropdown-hover.png") center no-repeat;
+  background-size: contain;
+}
+
 .triple-lists .list-name {
   margin-right: 10px;
 }
@@ -1286,6 +1341,19 @@ footer.footer-intro {
   color: #5263ff;
 }
 
+.triple-lists .sub-lists li a:active {
+  background-color: #5263ff;
+}
+
+.triple-lists .sub-lists li a:active span {
+  color: #ffffff;
+}
+
+.triple-lists .sub-lists li a:active .list-arrow figure {
+  background: url("./../images/arrow-dropdown.png") center no-repeat;
+  background-size: contain;
+}
+
 .triple-lists .sub-lists li .list-arrow figure {
   background: url("./../images/arrow-dropdown-hover.png") center no-repeat;
   background-size: contain;
@@ -1329,6 +1397,19 @@ footer.footer-intro {
 
 .triple-lists .third-lists li a span {
   color: #5263ff;
+}
+
+.triple-lists .third-lists li a:active {
+  background-color: #5263ff;
+}
+
+.triple-lists .third-lists li a:active span {
+  color: #ffffff;
+}
+
+.triple-lists .third-lists li a:active .list-arrow figure {
+  background: url("./../images/arrow-dropdown.png") center no-repeat;
+  background-size: contain;
 }
 
 .triple-lists .third-lists li .list-arrow figure {
@@ -1521,7 +1602,8 @@ footer.footer-intro {
   margin: 0 auto;
 }
 
-.carousel-inner .carousel-item .pdf-box iframe {
+.carousel-inner .carousel-item .pdf-box iframe,
+.carousel-inner .carousel-item .pdf-box img {
   position: absolute;
   top: 0;
   left: 0;

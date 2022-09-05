@@ -176,6 +176,12 @@
           color: inherit;
           transition: all 0.5s;
         }
+        &:active {
+          a {
+            background-color: $color-primary;
+            color: #ffffff;
+          }
+        }
       }
     }
   }

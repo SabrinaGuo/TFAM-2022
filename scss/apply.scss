@@ -87,7 +87,7 @@
   &-name {
     margin-bottom: 10px;
     h2 {
-      font-size: 1.5rem; //24px
+      font-size: 1.875rem; //30px
       font-weight: bold;
       line-height: normal;
       color: $text-color-primary;
@@ -100,7 +100,7 @@
       color: $text-color-primary;
     }
     h4 {
-      font-size: $font-normal; //16px
+      font-size: $font-sm; //18px
       font-weight: bold;
       line-height: normal;
       margin: 10px 0 5px;
@@ -120,9 +120,6 @@
     &-pic {
       margin-top: 50px;
       margin-bottom: 25px;
-      &.pic-top {
-        margin-top: 100px;
-      }
     }
     &-name {
       margin-bottom: 40px;
@@ -133,7 +130,7 @@
         font-size: 1.5rem; //24px
       }
       h4 {
-        font-size: $font-normal; //16px
+        font-size: $font-sm; //18px
       }
     }
   }
@@ -154,7 +151,7 @@
         font-size: $font-sm; //18px
       }
       h4 {
-        font-size: $font-normal; //16px
+        font-size: $font-sm; //18px
       }
     }
   }
@@ -165,6 +162,21 @@
     &-pic {
       margin-top: 50px;
       margin-bottom: 45px;
+      &.pic-top {
+        margin-top: 100px;
+      }
+    }
+    &-name {
+      margin-bottom: 30px;
+      h2 {
+        font-size: $font-lg; //36px
+      }
+      h3 {
+        font-size: 1.5rem; //24px
+      }
+      h4 {
+        font-size: 1.5rem; //24px
+      }
     }
   }
   @media (min-width: 1200px) {
@@ -185,10 +197,10 @@
     &-name {
       // margin-top: 30px;
       h2 {
-        font-size: 3.875rem; //62px
+        font-size: 3.938rem; //63px
       }
       h3 {
-        font-size: 2.625rem; //42px
+        font-size: 2.688rem; //43px
       }
       h4 {
         font-size: 1.5rem; //24px
@@ -264,6 +276,12 @@
     padding: 12px 16px;
     font-size: $font-normal;
     transition: all 0.5s;
+    text-decoration: none;
+    &:active {
+      background-color: #ffffff;
+      color: $text-color-primary;
+      text-decoration: none;
+    }
   }
   .sub-link {
     padding-top: 10px;
@@ -336,7 +354,7 @@
   p {
     font-size: $font-normal;
     font-weight: 300;
-    line-height: 1.71;
+    line-height: normal;
     color: $text-color-black;
   }
   .link-title {
@@ -444,14 +462,14 @@
       font-size: $font-md; //20px
     }
     .link-title {
-      max-width: 35%;
+      // max-width: 35%;
       font-size: 1.625rem; //26px
       &.link-sub-title {
         font-size: $font-md; //20px
       }
     }
     .link-description {
-      max-width: 65%;
+      // max-width: 65%;
       font-size: $font-md; //20px
     }
     .large-text {
@@ -467,6 +485,87 @@
     }
     .more {
       font-size: $font-md;
+    }
+  }
+}
+.des-sub-lists {
+  .sub-lists-row {
+    border-bottom: 1px solid #bababa;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: nowrap;
+    font-weight: 500;
+    padding: 0 0 25px 0;
+    & + .sub-lists-row {
+      padding: 25px 0 0 0;
+      border-bottom: none;
+    }
+  }
+  .sub-lists-title {
+    max-width: 90px;
+    width: 100%;
+    font-size: $font-sm; //18px
+    font-weight: 500;
+    line-height: normal;
+    color: #8a8a8a;
+    &.link-sub-title {
+      font-size: $font-normal; //16px
+      color: $text-color-black;
+    }
+  }
+  .sub-lists-description {
+    max-width: calc(100% - 90px);
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    span {
+      display: inline-block;
+      font-size: $font-normal;
+      font-weight: 300;
+      line-height: normal;
+      color: $text-color-black;
+    }
+  }
+  .icon-book {
+    display: inline-block;
+    vertical-align: middle;
+    width: 27px;
+    height: 37px;
+    background-image: url("../images/icon-book@2x.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 10px;
+    &:hover {
+      background-image: url("../images/icon-book-hover@2x.png");
+    }
+  }
+  @media (min-width: 768px) {
+    .sub-lists-title {
+      font-size: 1.5rem; //24px
+      &.link-sub-title {
+        font-size: $font-sm;
+      }
+    }
+    .sub-lists-description {
+      span {
+        font-size: $font-sm;
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .sub-lists-title {
+      font-size: 1.625rem; //26px
+      &.link-sub-title {
+        font-size: $font-md; //20px
+      }
+    }
+    .sub-lists-description {
+      span {
+        font-size: $font-md; //20px
+      }
     }
   }
 }

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500&display=swap");
 /* font */
 /* radius */
 /* image url */
@@ -118,7 +118,7 @@
 }
 
 .apply-name h2 {
-  font-size: 1.5rem;
+  font-size: 1.875rem;
   font-weight: bold;
   line-height: normal;
   color: #5263ff;
@@ -132,7 +132,7 @@
 }
 
 .apply-name h4 {
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: bold;
   line-height: normal;
   margin: 10px 0 5px;
@@ -160,9 +160,6 @@
     margin-top: 50px;
     margin-bottom: 25px;
   }
-  .apply-pic.pic-top {
-    margin-top: 100px;
-  }
   .apply-name {
     margin-bottom: 40px;
   }
@@ -173,7 +170,7 @@
     font-size: 1.5rem;
   }
   .apply-name h4 {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 
@@ -195,7 +192,7 @@
     font-size: 1.125rem;
   }
   .apply-name h4 {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 
@@ -206,6 +203,21 @@
   .apply-pic {
     margin-top: 50px;
     margin-bottom: 45px;
+  }
+  .apply-pic.pic-top {
+    margin-top: 100px;
+  }
+  .apply-name {
+    margin-bottom: 30px;
+  }
+  .apply-name h2 {
+    font-size: 2.25rem;
+  }
+  .apply-name h3 {
+    font-size: 1.5rem;
+  }
+  .apply-name h4 {
+    font-size: 1.5rem;
   }
 }
 
@@ -224,10 +236,10 @@
     font-size: 1.3125rem;
   }
   .apply-name h2 {
-    font-size: 3.875rem;
+    font-size: 3.938rem;
   }
   .apply-name h3 {
-    font-size: 2.625rem;
+    font-size: 2.688rem;
   }
   .apply-name h4 {
     font-size: 1.5rem;
@@ -313,6 +325,13 @@
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
+  text-decoration: none;
+}
+
+.index-links .btn-link:active {
+  background-color: #ffffff;
+  color: #5263ff;
+  text-decoration: none;
 }
 
 .index-links .sub-link {
@@ -414,7 +433,7 @@
 .links-row p {
   font-size: 1rem;
   font-weight: 300;
-  line-height: 1.71;
+  line-height: normal;
   color: #000000;
 }
 
@@ -523,14 +542,12 @@
     font-size: 1.3125rem;
   }
   .links-row .link-title {
-    max-width: 35%;
     font-size: 1.625rem;
   }
   .links-row .link-title.link-sub-title {
     font-size: 1.3125rem;
   }
   .links-row .link-description {
-    max-width: 65%;
     font-size: 1.3125rem;
   }
   .links-row .large-text {
@@ -542,6 +559,100 @@
     line-height: normal;
   }
   .links-row .more {
+    font-size: 1.3125rem;
+  }
+}
+
+.des-sub-lists .sub-lists-row {
+  border-bottom: 1px solid #bababa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  font-weight: 500;
+  padding: 0 0 25px 0;
+}
+
+.des-sub-lists .sub-lists-row + .sub-lists-row {
+  padding: 25px 0 0 0;
+  border-bottom: none;
+}
+
+.des-sub-lists .sub-lists-title {
+  max-width: 90px;
+  width: 100%;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: normal;
+  color: #8a8a8a;
+}
+
+.des-sub-lists .sub-lists-title.link-sub-title {
+  font-size: 1rem;
+  color: #000000;
+}
+
+.des-sub-lists .sub-lists-description {
+  max-width: calc(100% - 90px);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.des-sub-lists .sub-lists-description span {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: normal;
+  color: #000000;
+}
+
+.des-sub-lists .icon-book {
+  display: inline-block;
+  vertical-align: middle;
+  width: 27px;
+  height: 37px;
+  background-image: url("../images/icon-book@2x.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 10px;
+}
+
+.des-sub-lists .icon-book:hover {
+  background-image: url("../images/icon-book-hover@2x.png");
+}
+
+@media (min-width: 768px) {
+  .des-sub-lists .sub-lists-title {
+    font-size: 1.5rem;
+  }
+  .des-sub-lists .sub-lists-title.link-sub-title {
+    font-size: 1.125rem;
+  }
+  .des-sub-lists .sub-lists-description span {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .des-sub-lists .sub-lists-title {
+    font-size: 1.625rem;
+  }
+  .des-sub-lists .sub-lists-title.link-sub-title {
+    font-size: 1.3125rem;
+  }
+  .des-sub-lists .sub-lists-description span {
     font-size: 1.3125rem;
   }
 }

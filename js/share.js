@@ -1,6 +1,6 @@
 let meunOpen = false; //選單開啟與否
 let searchBarOpen = false; //search開啟與否
-let sortHead = $(".sort-table-wrap thead th"); //表格篩選圖示
+let sortHead = $(".arrow-control thead th"); //表格篩選圖示
 
 //開啟收合的選單
 $(".meun-btn").on("click", function () {
@@ -78,16 +78,29 @@ sortHead.on("click", function () {
 $(".double-lists li").on("click", function (e) {
   e.stopPropagation();
   $(this).toggleClass("active open");
-  $(this).siblings().removeClass("active open");
+  $(this)
+    .siblings()
+    .removeClass("active open")
+    .find(".sub-lists li")
+    .removeClass("active open");
 });
 // 三層選單控制
 $(".triple-lists li").on("click", function (e) {
   e.stopPropagation();
   $(this).toggleClass("active open");
-  $(this).siblings().removeClass("active open");
+  $(this)
+    .siblings()
+    .removeClass("active open")
+    .find(".sub-lists li")
+    .removeClass("active open")
+    .find(".third-lists li")
+    .removeClass("active open");
+});
+$(".sub-lists li").on("click", function () {
+  $(this).siblings().find(".third-lists li").removeClass("active open");
 });
 $(".third-lists li").on("click", function (e) {
-  $(this).parents("li").removeClass("actve");
+  $(this).parents("li").removeClass("active");
 });
 
 //目前螢幕寬度
