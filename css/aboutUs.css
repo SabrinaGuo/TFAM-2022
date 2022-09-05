@@ -144,11 +144,11 @@
 @media (min-width: 768px) {
   .pic-box.float-right-img {
     float: right;
-    margin: 0 0 20px 50px;
+    margin: 0 0 15px 50px;
   }
   .pic-box.float-left-img {
     float: left;
-    margin: 0 50px 20px 0;
+    margin: 0 50px 15px 0;
   }
   .pic-box.sm-img {
     max-width: 160px;
@@ -225,10 +225,10 @@
 
 @media (min-width: 1200px) {
   .pic-box.float-right-img {
-    margin: 0 0 20px 70px;
+    margin: 0 0 15px 70px;
   }
   .pic-box.float-left-img {
-    margin: 0 70px 20px 0;
+    margin: 0 70px 15px 0;
   }
   .pic-box.sm-img {
     max-width: 375px;
