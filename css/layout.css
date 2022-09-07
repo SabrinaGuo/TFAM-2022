@@ -851,9 +851,16 @@ footer.footer-intro {
   margin: 0 auto;
 }
 
+.main-content.main-idx {
+  padding-bottom: 50px;
+}
+
 @media (min-width: 768px) {
   .main-content {
     padding-top: 100px;
+  }
+  .main-content.main-idx {
+    padding-bottom: 0px;
   }
 }
 
@@ -896,7 +903,7 @@ footer.footer-intro {
 }
 
 .pages-navgation {
-  margin-top: 34px;
+  margin-top: 50px;
   margin-bottom: 45px;
   display: -webkit-box;
   display: -ms-flexbox;

@@ -577,8 +577,14 @@ footer {
 
   width: 100%;
   margin: 0 auto;
+  &.main-idx {
+    padding-bottom: 50px;
+  }
   @media (min-width: 768px) {
     padding-top: 100px;
+    &.main-idx {
+      padding-bottom: 0px;
+    }
   }
   @media (max-height: 420px) {
     padding-top: 70px;
@@ -608,7 +614,7 @@ footer {
 }
 //======================= pages-navgatio ===============
 .pages-navgation {
-  margin-top: 34px;
+  margin-top: 50px;
   margin-bottom: 45px;
   display: flex;
   justify-content: start;
