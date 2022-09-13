@@ -255,13 +255,13 @@ a {
     display: block;
     border-radius: 25px;
     width: 126px;
-  }
-  @media (min-width: 1200px) {
-    padding: 14px 6px;
     &:hover {
       background-color: $color-black;
       color: #ffffff;
     }
+  }
+  @media (min-width: 1200px) {
+    padding: 14px 6px;
   }
 }
 .meun-btn {
@@ -403,6 +403,9 @@ nav {
       line-height: normal;
       transition: all 0.5s;
       border-bottom: 1px solid #828282;
+      &.btn-guide {
+        border-bottom: 1px solid #000000;
+      }
     }
 
     &:nth-of-type(2) {
@@ -425,7 +428,7 @@ nav {
   .btn-guide {
     display: inline-block;
     font-size: 1rem;
-    padding: 2px 12px;
+    padding: 7px 12px;
   }
   @media (min-width: 992px) {
     height: auto;
