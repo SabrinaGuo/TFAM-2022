@@ -248,14 +248,14 @@
 
 @media (min-width: 768px) {
   .exhibition-list li {
-    max-width: calc((100% - 200px) / 3);
-    margin: 0 50px 100px;
+    max-width: calc((100% - 112px) / 3);
+    margin: 0 28px 100px;
   }
   .exhibition-list li:nth-of-type(3n + 1) {
-    margin: 0 50px 100px 0;
+    margin: 0 28px 100px 0;
   }
   .exhibition-list li:nth-of-type(3n) {
-    margin: 0 0 100px 50px;
+    margin: 0 0 100px 28px;
   }
   .exhibition-list li .date {
     padding: 20px 0;
@@ -270,17 +270,17 @@
 
 @media (max-height: 420px) {
   .exhibition-list li {
-    max-width: calc((100% - 100px) / 2);
-    margin: 0 50px 100px 0;
+    max-width: calc((100% - 76px) / 2);
+    margin: 0 38px 50px 0;
   }
   .exhibition-list li:nth-of-type(3n + 1) {
-    margin: 0 50px 100px 0;
+    margin: 0 38px 50px 0;
   }
   .exhibition-list li:nth-of-type(3n) {
-    margin: 0 50px 100px 0;
+    margin: 0 38px 50px 0;
   }
   .exhibition-list li:nth-of-type(2n) {
-    margin: 0 0 100px 50px;
+    margin: 0 0 50px 38px;
   }
   .exhibition-list li .date {
     padding: 20px 0;
@@ -294,6 +294,37 @@
 }
 
 @media (min-width: 992px) {
+  .exhibition-list li {
+    max-width: calc((100% - 168px) / 4);
+    margin: 0 28px 100px;
+  }
+  .exhibition-list li:nth-of-type(2n) {
+    margin: 0 28px 100px;
+  }
+  .exhibition-list li:nth-of-type(3n + 1) {
+    margin: 0 28px 100px;
+  }
+  .exhibition-list li:nth-of-type(3n) {
+    margin: 0 28px 100px;
+  }
+  .exhibition-list li:nth-of-type(4n + 1) {
+    margin: 0 28px 100px 0;
+  }
+  .exhibition-list li:nth-of-type(4n) {
+    margin: 0 0 100px 28px;
+  }
+  .exhibition-list li .date {
+    padding: 20px 0;
+  }
+  .exhibition-list li .date p {
+    font-size: 1.75rem;
+  }
+  .exhibition-list .detail-list li {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1200px) {
   .exhibition-list li {
     max-width: calc((100% - 300px) / 4);
     margin: 0 50px 100px;
@@ -313,18 +344,6 @@
   .exhibition-list li:nth-of-type(4n) {
     margin: 0 0 100px 50px;
   }
-  .exhibition-list li .date {
-    padding: 20px 0;
-  }
-  .exhibition-list li .date p {
-    font-size: 1.75rem;
-  }
-  .exhibition-list .detail-list li {
-    font-size: 1.125rem;
-  }
-}
-
-@media (min-width: 1200px) {
   .exhibition-list li .pic-intro-link:hover .date p {
     color: #919191;
   }
