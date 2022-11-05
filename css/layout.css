@@ -202,6 +202,7 @@ a:hover {
 
 @media (min-width: 1200px) {
   .header {
+    background: #ffffff url("../images/kv-inner-banner@2x_01.png") right top no-repeat;
     padding-bottom: 522px;
     background-size: 100% 100%;
   }
